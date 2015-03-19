@@ -1,0 +1,77 @@
+<HTML>
+	<HEAD>
+		<title>Laboratory Information Management System</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<script language="javascript" type="text/javascript" src="menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="pro.css">
+			<style type="text/css"> body { color:#6D6D6C; font-size:12px; font-weight:bold; font-family:Arial,Verdana; }
+	</style>
+			<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+			</script>
+	</HEAD>
+	<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+		<script language="JavaScript" type="text/JavaScript">
+function enterkeyformsubmission()
+{
+	if(event.keyCode==13)
+	{
+		submitform();
+	}
+}
+function submitform()
+{
+		if(document.indexform.userID.value.length==0)
+		{
+			alert("Please provide UserID to login");
+			document.indexform.userID.focus();
+			return false;
+		}
+		else if(document.indexform.password.value.length==0)
+		{
+			alert("Please provide password to login");
+			document.indexform.password.focus();
+			return false;
+		}
+		else
+		{
+			document.indexform.submit();
+		}
+}
+		</script>
+<TABLE WIDTH="1004" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR valign="top">
+				<TD colspan="5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td width="21%"><img src="images/header_01.jpg" width=223 height=75 alt=""></td>
+          <TD> <IMG SRC="images/header_02.jpg" WIDTH=148 HEIGHT=75 ALT=""></TD>
+          <TD> <IMG SRC="images/header_03.jpg" WIDTH=416 HEIGHT=75 ALT=""></TD>
+          <td width="44%"><IMG SRC="images/header_04.jpg" WIDTH=217 HEIGHT=75 ALT=""></td>
+        </tr>
+      </table>
+				</TD>
+			</TR>			
+		</TABLE>
+		
+<!-- Debut menu http://iubito.free.fr-->
+<script language="Javascript" type="text/javascript">
+	var nbmenu=3;
+	var largeur_menu = 125;
+	var hauteur_menu = 50;
+	var largeur_sous_menu = 125;
+	var largeur_auto_ssmenu = false;
+	var espace_entre_menus = 2;
+	var marge_en_haut_de_page = 30;
+	var suivre_le_scroll=false;
+	var top_ssmenu = 23;
+    Chargement();
+		</script>
+</BODY>
+</HTML>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDF9E8F7-6102-406C-9D88-F7A04EC13DFA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>HimsBLRegistration</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HimsBLRegistration</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;trACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <treatWarningsAsErrors>false</treatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>trACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <treatWarningsAsErrors>false</treatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLClinic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDepartment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDependent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDoctor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDoctorSpeciality.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLEmpClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLEmployee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLOPDDoctorStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLOrganizations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatientVisit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPreferencetable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPVComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLRank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLServiceClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLServicesAvailed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLShuffledPatient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSpeciality.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSpecialityType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTDesignation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTDisease.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTDsgSpecialty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTPersonnelSpecialty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTPVRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsGeneralCollections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Projectreference Include="..\HimsDlRegistration\HimsDlRegistration.csproj">
+      <Project>{A83A1926-2704-4131-A299-5B90E06C3E72}</Project>
+      <Name>HimsDlRegistration</Name>
+    </Projectreference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

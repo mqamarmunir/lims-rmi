@@ -1,0 +1,646 @@
+﻿This report shows the steps taken to convert your Web application from ASP.NET 1.1 to ASP.NET 2.0. 
+There may be some unresolved conversion issues you will need to manually fix. 
+For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic "Converting from Visual Studio .NET 2002 or 2003".
+Conversion Started on project file HMIS.csproj at March 04 2007, 11:10:43.
+
+=========================ERRORS===================
+ERROR: Unable to convert project reference LS_BusinessLayer.
+ERROR: The following files were not migrated because they were not found in the project file or the associated 'BuildAction' is set to 'None'.
+You may need to exclude these files from the project after the conversion process in order to compile your web site: 
+File List == pr\prreports\prg-006-011.cs,pr\prreports\entticket.cs,pr\prreports\prg-004-011.cs,webform1.aspx,pr\prreports\servicelist1.cs,
+pr\prreports\prg-002-011.cs,pr\prreports\prg-000-291.cs,pr\prreports\employeelist.cs,limslayers\ls_businesslayer\clsblduesreceived.cs,
+limslayers\ls_businesslayer\clsblunit.cs,limslayers\ls_businesslayer\clsblcomment.cs,limslayers\ls_businesslayer\clsbltmethod.cs,
+limslayers\ls_businesslayer\clsbldtransaction.cs,limslayers\ls_businesslayer\clsblpatienttestchange.cs,limslayers\ls_businesslayer\clsblorganization.cs,
+limslayers\ls_businesslayer\clsbltdiscountlevel.cs,pr\prreports\ranklist1.cs,limslayers\ls_businesslayer\clsblclinic.cs,limslayers\ls_businesslayer\clsblumatrix.cs,
+limslayers\ls_businesslayer\clsbltestresultm.cs,limslayers\ls_businesslayer\clsbldepartment.cs,limslayers\ls_businesslayer\clsblorganism.cs,
+pr\prreports\departmentlist1.cs,pr\prreports\prg-001-011.cs,limslayers\ls_businesslayer\clsblattributerange.cs,pr\prreports\employeelist1.cs,
+limslayers\ls_businesslayer\clsblrank.cs,pr\prreports\prg-000-22.cs,limslayers\ls_businesslayer\clsblcashreceive.cs,limslayers\ls_businesslayer\clsbltest.cs,
+pr\prreports\prg-007-031.cs,pr\prreports\sectionlist1.cs,limslayers\ls_businesslayer\clsblspecimencollectiondetail.cs,
+limslayers\ls_businesslayer\clsblrole.cs,limslayers\ls_businesslayer\clsblfacsection.cs,pr\prreports\empclasslist1.cs,pr\prreports\specialitylist.cs,
+pr\prreports\patientvisit1.cs,lims\webforms\webform1.aspx.cs,limslayers\ls_businesslayer\clsblsection.cs,limslayers\ls_businesslayer\fileio.cs,
+pr\prreports\prg-000-301.cs,pr\prreports\prg-000-27.cs,pr\prreports\patientvisit.cs,limslayers\ls_businesslayer\clsblvault.cs,
+pr\prreports\prg-005-01.cs,pr\prreports\prg-000-211.cs,pr\prreports\prg-000-30.cs,lims\utilities\webuifacade.cs,
+limslayers\ls_businesslayer\clsgeneralcollections.cs,limslayers\ls_businesslayer\clsbllogin.cs,pr\prreports\prg-006-02.cs,pr\prreports\prg-000-271.cs,
+pr\prreports\prg-006-021.cs,limslayers\ls_businesslayer\clsblmethod.cs,pr\prreports\prg-004-021.cs,pr\prreports\prg-002-01.cs,
+limslayers\ls_businesslayer\clsblpatient.cs,limslayers\ls_businesslayer\clsbltranshistory.cs,pr\prreports\servicelist.cs,pr\prreports\prg-007-02.cs,
+limslayers\ls_datalayer\clsoperation.cs,pr\prreports\prg-003-02.cs,pr\prreports\sectionlist.cs,pr\prreports\doctorlist.cs,
+limslayers\ls_businesslayer\clsblspecimencolletion.cs,limslayers\ls_businesslayer\clsbltestprocedure.cs,pr\prreports\prg-004-02.cs,
+limslayers\ls_businesslayer\clsblpaymentmode.cs,limslayers\ls_businesslayer\clsbldoctor.cs,limslayers\ls_businesslayer\clsbltestattribute.cs,pr\prreports\empclasslist.cs,
+pr\prreports\prg-000-29.cs,pr\prreports\prg-007-011.cs,pr\prreports\prg-005-011.cs,pr\prreports\prg-003-011.cs,
+limslayers\ls_businesslayer\clsblspecimentype.cs,pr\prreports\specialitylist1.cs,limslayers\ls_businesslayer\worklisthistory.cs,pr\prreports\prg-000-21.cs,
+limslayers\ls_businesslayer\clsblgeneraltestresult.cs,limslayers\ls_businesslayer\assemblyinfo.cs,limslayers\ls_businesslayer\clsblsearchpr.cs,
+limslayers\ls_businesslayer\clsblrelationship.cs,pr\prreports\prg-000-221.cs,limslayers\ls_businesslayer\clsblward.cs,pr\prreports\patientvisitent1.cs,
+limslayers\ls_businesslayer\clsblpatienthistory.cs,limslayers\ls_datalayer\iinterface.cs,pr\prreports\prg-000-281.cs,limslayers\ls_businesslayer\clsbltestprocess.cs,
+limslayers\ls_businesslayer\clsblmisc.cs,limslayers\ls_datalayer\clsdbhims.cs,lims\reports\new folder\wfrmreceipt.aspx,
+limslayers\ls_businesslayer\clsblspecimencontainer.cs,pr\prreports\prg-006-01.cs,limslayers\ls_businesslayer\clsblfactory.cs,pr\prreports\factorylist.cs,
+limslayers\ls_businesslayer\validation.cs,limslayers\ls_businesslayer\clsblreception.cs,limslayers\ls_businesslayer\user.cs,
+limslayers\ls_businesslayer\querybuilder.cs,pr\prreports\departmentlist.cs,limslayers\ls_businesslayer\clsblbatchingtest.cs,pr\prreports\prg-007-01.cs,
+pr\prreports\cliniclist1.cs,pr\prreports\prg-000-23.cs,pr\prreports\prg-003-01.cs,lims\webforms\webform1.aspx,
+limslayers\ls_businesslayer\clsblattributeselection.cs,limslayers\ls_businesslayer\clsblclient.cs,limslayers\ls_businesslayer\clsblworklist.cs,
+limslayers\ls_datalayer\assemblyinfo.cs,limslayers\ls_businesslayer\clsbltestgroup.cs,limslayers\ls_businesslayer\clsblopinion.cs,
+limslayers\ls_businesslayer\clsblusxrays.cs,limslayers\ls_businesslayer\clsblmtransaction.cs,webform1.aspx.cs,pr\prreports\factorylist1.cs,
+pr\prreports\dependentlist1.cs,pr\prreports\prg-004-01.cs,pr\prreports\patientvisitent.cs,pr\prreports\prg-007-021.cs,pr\prreports\entticket1.cs,
+limslayers\ls_businesslayer\clsblpatientqueue.cs,pr\prreports\prg-003-021.cs,limslayers\ls_datalayer\clsdbconnection.cs,pr\prreports\doctorlist1.cs,
+lims\reports\new folder\generalreports.aspx,limslayers\ls_businesslayer\clsblservice.cs,limslayers\ls_businesslayer\clsblpatientstatus.cs,
+pr\prreports\dependentlist.cs,limslayers\ls_businesslayer\clsblresultdespatch.cs,pr\prreports\prg-001-01.cs,limslayers\ls_businesslayer\clsbldrug.cs,
+limslayers\ls_businesslayer\clsblspecimen.cs,pr\prreports\ranklist.cs,pr\prreports\prg-000-231.cs,limslayers\ls_businesslayer\clsblreport.cs,
+lims\utilities\scomponents.cs,pr\prreports\cliniclist.cs,pr\prreports\prg-007-03.cs.
+
+=========================WARNINGS=================
+Warning: This web project was converted as a file-based web application. If your site contained any IIS meta-information, e.g. sub-folders marked as virtual directories, it is recommended that you close this web site and re-open it using the Open Web Site command and selecting the Local IIS tab.
+
+=========================COMMENTS=================
+Web.Config: Added 'xhtmlConformance' attribute.
+Web.Config: added a reference for assembly CrystalDecisions.Shared.
+Web.Config: added a reference for assembly CrystalDecisions.ReportSource.
+Web.Config: added a reference for assembly CrystalDecisions.CrystalReports.Engine.
+Web.Config: added a reference for assembly CrystalDecisions.Web.
+Web.Config: added a reference for assembly System.Windows.Forms.
+Web.Config: added a reference for assembly System.Design.
+Web.Config: added a reference for assembly Accessibility.
+Removed attribute AutoEventWireup from file default.aspx.
+Removed attribute Codebehind from file default.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file default.aspx.cs (Line 21).
+Removed attribute AutoEventWireup from file ErrorPage.aspx.
+Removed attribute Codebehind from file ErrorPage.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ErrorPage.aspx.cs (Line 20).
+Removed attribute Codebehind from file Global.asax.
+Removed attribute AutoEventWireup from file login.aspx.
+Removed attribute Codebehind from file login.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file login.aspx.cs (Line 24).
+Removed attribute AutoEventWireup from file logout.aspx.
+Removed attribute Codebehind from file logout.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file logout.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file lims\reports\generalreports.aspx.
+Removed attribute Codebehind from file lims\reports\generalreports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\reports\GeneralReports.aspx.cs (Line 108).
+Removed attribute AutoEventWireup from file lims\reports\wfrmreceipt.aspx.
+Removed attribute Codebehind from file lims\reports\wfrmreceipt.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\reports\wfrmReceipt.aspx.cs (Line 109).
+Removed attribute AutoEventWireup from file lims\webforms\searchpr.aspx.
+Removed attribute Codebehind from file lims\webforms\searchpr.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\SearchPR.aspx.cs (Line 23).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file lims\webforms\SearchPR.aspx.cs (Line 76).
+Warning: Access level of 'ddlOrganization_SelectedIndexChanged' changed to 'protected' in file lims\webforms\SearchPR.aspx.cs (Line 136).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file lims\webforms\SearchPR.aspx.cs (Line 176).
+Removed attribute AutoEventWireup from file lims\webforms\webform2.aspx.
+Removed attribute Codebehind from file lims\webforms\webform2.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\WebForm2.aspx.cs (Line 22).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmattributerange.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmattributerange.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmAttributeRange.aspx.cs (Line 27).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmAttributeRange.aspx.cs (Line 110).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmAttributeRange.aspx.cs (Line 146).
+Warning: Access level of 'ddlTest_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmAttributeRange.aspx.cs (Line 184).
+Warning: Access level of 'ddlTestAttribute_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmAttributeRange.aspx.cs (Line 222).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmattributevalues.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmattributevalues.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmAttributeValues.aspx.cs (Line 19).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmattributrselection.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmattributrselection.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmAttributrSelection.aspx.cs (Line 22).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmAttributrSelection.aspx.cs (Line 146).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmAttributrSelection.aspx.cs (Line 152).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmbatchedtests.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmbatchedtests.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmBatchedTests.aspx.cs (Line 25).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmBatchedTests.aspx.cs (Line 104).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmBatchedTests.aspx.cs (Line 136).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmBatchedTests.aspx.cs (Line 373).
+Warning: Access level of 'lbtnNew_Click' changed to 'protected' in file lims\webforms\wfrmBatchedTests.aspx.cs (Line 455).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmcashreceive.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmcashreceive.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 21).
+Warning: Access level of 'Refreash_Click' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 148).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 153).
+Warning: Access level of 'lnkToday_Click' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 159).
+Warning: Access level of 'lnkYesterday_Click' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 166).
+Warning: Access level of 'dgGroupList_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmCashReceive.aspx.cs (Line 173).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmcomment.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmcomment.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmComment.aspx.cs (Line 29).
+Warning: Access level of 'ButGo_Click' changed to 'protected' in file lims\webforms\wfrmComment.aspx.cs (Line 136).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmdrug.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmdrug.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmDrug.aspx.cs (Line 23).
+Warning: Access level of 'ddlOrganism_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmDrug.aspx.cs (Line 234).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmduesreceiving.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmduesreceiving.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmDuesReceiving.aspx.cs (Line 21).
+Warning: Access level of 'lbtnRefresh_Click' changed to 'protected' in file lims\webforms\wfrmDuesReceiving.aspx.cs (Line 204).
+Warning: Access level of 'lbtnAll_Click' changed to 'protected' in file lims\webforms\wfrmDuesReceiving.aspx.cs (Line 209).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file lims\webforms\wfrmDuesReceiving.aspx.cs (Line 244).
+'Reference' tag with reference to '~/lims/reports/wfrmreceipt.aspx' added to file lims\webforms\wfrmduesreceiving.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmgeneraltestresult.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmgeneraltestresult.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmGeneralTestResult.aspx.cs (Line 25).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmGeneralTestResult.aspx.cs (Line 92).
+Warning: Access level of 'LinkButton3_Click' changed to 'protected' in file lims\webforms\wfrmGeneralTestResult.aspx.cs (Line 187).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file lims\webforms\wfrmGeneralTestResult.aspx.cs (Line 192).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmmethod.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmmethod.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmMethod.aspx.cs (Line 26).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmMethod.aspx.cs (Line 110).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmMethod.aspx.cs (Line 116).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmMethod.aspx.cs (Line 170).
+Warning: Access level of 'dgMethod_Init' changed to 'protected' in file lims\webforms\wfrmMethod.aspx.cs (Line 236).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmmicrotestdetail.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmmicrotestdetail.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 38).
+Warning: Access level of 'LinkButton3_Click' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 332).
+Warning: Access level of 'lbtnNextPatient_Click' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 345).
+Warning: Access level of 'lbtnPatientTestDetail_Click' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 350).
+Warning: Access level of 'lbtnAddTest_Click' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 355).
+Warning: Access level of 'lbtnClose_Click' changed to 'protected' in file lims\webforms\wfrmMicroTestDetail.aspx.cs (Line 360).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmmisc.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmmisc.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmMisc.aspx.cs (Line 21).
+Warning: Access level of 'lbtnRefresh_Click' changed to 'protected' in file lims\webforms\wfrmMisc.aspx.cs (Line 215).
+Warning: Access level of 'lbtnAll_Click' changed to 'protected' in file lims\webforms\wfrmMisc.aspx.cs (Line 220).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file lims\webforms\wfrmMisc.aspx.cs (Line 255).
+Warning: Access level of 'rbtnlArchiver_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmMisc.aspx.cs (Line 301).
+'Reference' tag with reference to '~/lims/reports/wfrmreceipt.aspx' added to file lims\webforms\wfrmmisc.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmopinion.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmopinion.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmOpinion.aspx.cs (Line 28).
+Warning: Access level of 'ButGo_Click' changed to 'protected' in file lims\webforms\wfrmOpinion.aspx.cs (Line 135).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmorganism.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmorganism.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmOrganism.aspx.cs (Line 23).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmOrganism.aspx.cs (Line 88).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmOrganism.aspx.cs (Line 104).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmotherdeptactivity.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmotherdeptactivity.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmOtherDeptActivity.aspx.cs (Line 21).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmOtherDeptActivity.aspx.cs (Line 146).
+Warning: Access level of 'Refreash_Click' changed to 'protected' in file lims\webforms\wfrmOtherDeptActivity.aspx.cs (Line 157).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file lims\webforms\wfrmOtherDeptActivity.aspx.cs (Line 162).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatientedit.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatientedit.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientEdit.aspx.cs (Line 22).
+Warning: Access level of 'ButSave_Click' changed to 'protected' in file lims\webforms\wfrmPatientEdit.aspx.cs (Line 117).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatienthistory.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatienthistory.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientHistory.aspx.cs (Line 28).
+Warning: Access level of 'ButGo_Click' changed to 'protected' in file lims\webforms\wfrmPatientHistory.aspx.cs (Line 76).
+Warning: Access level of 'CmbDept_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmPatientHistory.aspx.cs (Line 110).
+Warning: Access level of 'CmbSubDept_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmPatientHistory.aspx.cs (Line 120).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatientqueue.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatientqueue.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientQueue.aspx.cs (Line 21).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatientstatus.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatientstatus.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientStatus.aspx.cs (Line 24).
+Warning: Access level of 'ButRefresh_Click' changed to 'protected' in file lims\webforms\wfrmPatientStatus.aspx.cs (Line 77).
+Warning: Access level of 'CmbSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmPatientStatus.aspx.cs (Line 90).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatienttestchange.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatienttestchange.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientTestChange.aspx.cs (Line 28).
+Warning: Access level of 'lbtnClose_Click' changed to 'protected' in file lims\webforms\wfrmPatientTestChange.aspx.cs (Line 215).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmpatientteststatus.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmpatientteststatus.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmPatientTestStatus.aspx.cs (Line 24).
+Warning: Access level of 'lbtnClose_Click' changed to 'protected' in file lims\webforms\wfrmPatientTestStatus.aspx.cs (Line 67).
+Warning: Access level of 'lbtnViewResult_Click' changed to 'protected' in file lims\webforms\wfrmPatientTestStatus.aspx.cs (Line 72).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmpatientteststatus.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmreception.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmreception.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 55).
+'Reference' tag with reference to '~/lims/reports/wfrmreceipt.aspx' added to file lims\webforms\wfrmreception.aspx.
+Warning: Access level of 'ButSave_Click' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 625).
+Warning: Access level of 'ButClear_Click' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 725).
+Warning: Access level of 'ButSelectedTest_Click' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 733).
+Warning: Access level of 'CmbPanel_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 897).
+Warning: Access level of 'RdoEntitled_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 921).
+Warning: Access level of 'RdoIOP_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 926).
+Warning: Access level of 'lnkbPrintLastReceipt_Click' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 965).
+Warning: Access level of 'ddlDiscountLevel_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 978).
+Warning: Access level of 'txtRank_TextChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 1037).
+Warning: Access level of 'CmbRelationShip_SelectedIndexChanged_1' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 1042).
+Warning: Access level of 'CmbRelationShip2_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReception.aspx.cs (Line 1052).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmreport.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmreport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmReport.aspx.cs (Line 21).
+Warning: Access level of 'butShow_Click' changed to 'protected' in file lims\webforms\wfrmReport.aspx.cs (Line 178).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmreport.aspx.
+Warning: Access level of 'rdoReport_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmReport.aspx.cs (Line 390).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmresultcallback.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmresultcallback.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmResultCallBack.aspx.cs (Line 21).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultCallBack.aspx.cs (Line 236).
+Warning: Access level of 'lbtnRefresh_Click' changed to 'protected' in file lims\webforms\wfrmResultCallBack.aspx.cs (Line 272).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultCallBack.aspx.cs (Line 283).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmresultdispatcher.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmresultdispatcher.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 21).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 243).
+Warning: Access level of 'lbtnRefresh_Click' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 279).
+Warning: Access level of 'lbtnAll_Click' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 284).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 290).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 319).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmresultdispatcher.aspx.
+Warning: Access level of 'rbtnlArchiver_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 366).
+Warning: Access level of 'dgResultDis_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 407).
+Warning: Access level of 'chkSelect_CheckedChanged' changed to 'protected' in file lims\webforms\wfrmResultDispatcher.aspx.cs (Line 412).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmrole.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmrole.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmRole.aspx.cs (Line 25).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmRole.aspx.cs (Line 92).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmRole.aspx.cs (Line 145).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmRole.aspx.cs (Line 212).
+Warning: Access level of 'dgRole_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmRole.aspx.cs (Line 218).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmsearchtest.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmsearchtest.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 37).
+Warning: Access level of 'ButGetTest_Click' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 165).
+Warning: Access level of 'CmbSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 197).
+Warning: Access level of 'ButClose_Click' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 232).
+Warning: Access level of 'lbtnCancel_Click' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 278).
+Warning: Access level of 'lbtnGetList_Click' changed to 'protected' in file lims\webforms\wfrmSearchTest.aspx.cs (Line 318).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmspecimencollection.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmspecimencollection.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 21).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 174).
+Warning: Access level of 'Refreash_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 185).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 190).
+Warning: Access level of 'lnkToday_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 196).
+Warning: Access level of 'lnkLast2day_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 203).
+Warning: Access level of 'lbtnPrintIndoorSpecimenReport_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollection.aspx.cs (Line 210).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmspecimencollection.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmspecimencollectiondetail.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmspecimencollectiondetail.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmSpecimenCollectionDetail.aspx.cs (Line 24).
+Warning: Access level of 'lbtnClose_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenCollectionDetail.aspx.cs (Line 86).
+Warning: Access level of 'DGPatientStatus_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmSpecimenCollectionDetail.aspx.cs (Line 117).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmspecimencontainer.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmspecimencontainer.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmSpecimenContainer.aspx.cs (Line 21).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenContainer.aspx.cs (Line 116).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenContainer.aspx.cs (Line 122).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmspecimentype.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmspecimentype.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmSpecimenType.aspx.cs (Line 21).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenType.aspx.cs (Line 116).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file lims\webforms\wfrmSpecimenType.aspx.cs (Line 122).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtest.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtest.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTest.aspx.cs (Line 28).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTest.aspx.cs (Line 143).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTest.aspx.cs (Line 172).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestattribute.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestattribute.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 26).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 172).
+Warning: Access level of 'ddlTestGroup_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 193).
+Warning: Access level of 'ddlTest_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 211).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 404).
+Warning: Access level of 'lbtnSelectionValues_Click' changed to 'protected' in file lims\webforms\wfrmTestAttribute.aspx.cs (Line 410).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestdetail.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestdetail.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestDetail.aspx.cs (Line 38).
+Warning: Access level of 'lbtnNextPatient_Click' changed to 'protected' in file lims\webforms\wfrmTestDetail.aspx.cs (Line 438).
+Warning: Access level of 'lbtnPatientTestDetail_Click' changed to 'protected' in file lims\webforms\wfrmTestDetail.aspx.cs (Line 443).
+Warning: Access level of 'lbtnClose_Click' changed to 'protected' in file lims\webforms\wfrmTestDetail.aspx.cs (Line 453).
+Warning: Access level of 'btnSaveAll_Click' changed to 'protected' in file lims\webforms\wfrmTestDetail.aspx.cs (Line 588).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestge.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestge.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestGE.aspx.cs (Line 36).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmtestge.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestgroup.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestgroup.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestGroup.aspx.cs (Line 25).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestGroup.aspx.cs (Line 182).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtesthisto.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtesthisto.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestHisto.aspx.cs (Line 36).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmtesthisto.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestmicro.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestmicro.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestMicro.aspx.cs (Line 35).
+Warning: Unable to convert event handler chkSensitivity_CheckedChanged in file lims\webforms\wfrmtestmicro.aspx.
+Warning: Access level of 'ddlOrganism_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestMicro.aspx.cs (Line 436).
+Warning: Access level of 'ddlOrganism2_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestMicro.aspx.cs (Line 567).
+Warning: Access level of 'ddlOrganism3_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestMicro.aspx.cs (Line 587).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmtestmicro.aspx.
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestqueue.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestqueue.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestQueue.aspx.cs (Line 21).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmtestresultverification.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmtestresultverification.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmTestResultVerification.aspx.cs (Line 24).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmTestResultVerification.aspx.cs (Line 91).
+Warning: Access level of 'LinkButton3_Click' changed to 'protected' in file lims\webforms\wfrmTestResultVerification.aspx.cs (Line 186).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file lims\webforms\wfrmTestResultVerification.aspx.cs (Line 191).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmunderconstruction.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmunderconstruction.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmUnderconstruction.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmvault.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmvault.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmVault.aspx.cs (Line 30).
+Warning: Access level of 'ButGo_Click' changed to 'protected' in file lims\webforms\wfrmVault.aspx.cs (Line 142).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmworklist.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmworklist.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmWorkList.aspx.cs (Line 23).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmworklist.aspx.
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file lims\webforms\wfrmWorkList.aspx.cs (Line 130).
+Warning: Access level of 'LinkButton2_Click' changed to 'protected' in file lims\webforms\wfrmWorkList.aspx.cs (Line 180).
+Warning: Access level of 'dgGroupList_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmWorkList.aspx.cs (Line 185).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file lims\webforms\wfrmWorkList.aspx.cs (Line 190).
+Removed attribute AutoEventWireup from file lims\webforms\wfrmworklisthistory.aspx.
+Removed attribute Codebehind from file lims\webforms\wfrmworklisthistory.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file lims\webforms\wfrmWorkListHistory.aspx.cs (Line 23).
+Warning: Access level of 'Refreash_Click' changed to 'protected' in file lims\webforms\wfrmWorkListHistory.aspx.cs (Line 131).
+'Reference' tag with reference to '~/lims/reports/generalreports.aspx' added to file lims\webforms\wfrmworklisthistory.aspx.
+Removed attribute AutoEventWireup from file pr\clinicentry.aspx.
+Removed attribute Codebehind from file pr\clinicentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 24).
+Warning: Access level of 'ddlDepartment_SelectedIndexChanged' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 68).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 285).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 305).
+Warning: Access level of 'txtClinic_TextChanged' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 316).
+Warning: Access level of 'dgClinic_SelectedIndexChanged' changed to 'protected' in file pr\ClinicEntry.aspx.cs (Line 321).
+Removed attribute AutoEventWireup from file pr\cneregistration.aspx.
+Removed attribute Codebehind from file pr\cneregistration.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\CNERegistration.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file pr\default.aspx.
+Removed attribute Codebehind from file pr\default.aspx.
+'Reference' tag with reference to '~/default.aspx' added to file pr\default.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\default.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file pr\departmententry.aspx.
+Removed attribute Codebehind from file pr\departmententry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\DepartmentEntry.aspx.cs (Line 24).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\DepartmentEntry.aspx.cs (Line 165).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\DepartmentEntry.aspx.cs (Line 179).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\DepartmentEntry.aspx.cs (Line 207).
+Removed attribute AutoEventWireup from file pr\dependentregistration.aspx.
+Removed attribute Codebehind from file pr\dependentregistration.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\DependentRegistration.aspx.cs (Line 30).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\DependentRegistration.aspx.cs (Line 222).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\DependentRegistration.aspx.cs (Line 497).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\DependentRegistration.aspx.cs (Line 508).
+Warning: Access level of 'Relationddl_SelectedIndexChanged' changed to 'protected' in file pr\DependentRegistration.aspx.cs (Line 627).
+Removed attribute AutoEventWireup from file pr\doctorentry.aspx.
+Removed attribute Codebehind from file pr\doctorentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 29).
+Warning: Access level of 'dgSpeciality_SelectedIndexChanged' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 543).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 553).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 569).
+Warning: Access level of 'ddlTitles_SelectedIndexChanged' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 585).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 590).
+Warning: Access level of 'txtHomePhone1_TextChanged' changed to 'protected' in file pr\DoctorEntry.aspx.cs (Line 604).
+Removed attribute AutoEventWireup from file pr\empclassentry.aspx.
+Removed attribute Codebehind from file pr\empclassentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\EmpClassEntry.aspx.cs (Line 24).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\EmpClassEntry.aspx.cs (Line 152).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\EmpClassEntry.aspx.cs (Line 175).
+Warning: Access level of 'dgClass_SelectedIndexChanged' changed to 'protected' in file pr\EmpClassEntry.aspx.cs (Line 190).
+Removed attribute AutoEventWireup from file pr\employeeregistration.aspx.
+Removed attribute Codebehind from file pr\employeeregistration.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\EmployeeRegistration.aspx.cs (Line 29).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\EmployeeRegistration.aspx.cs (Line 479).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\EmployeeRegistration.aspx.cs (Line 564).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\EmployeeRegistration.aspx.cs (Line 573).
+Warning: Access level of 'EmployerDdl_SelectedIndexChanged' changed to 'protected' in file pr\EmployeeRegistration.aspx.cs (Line 602).
+Removed attribute AutoEventWireup from file pr\factoryentry.aspx.
+Removed attribute Codebehind from file pr\factoryentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\FactoryEntry.aspx.cs (Line 25).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\FactoryEntry.aspx.cs (Line 308).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\FactoryEntry.aspx.cs (Line 315).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\FactoryEntry.aspx.cs (Line 328).
+Removed attribute AutoEventWireup from file pr\imagepractice.aspx.
+Removed attribute Codebehind from file pr\imagepractice.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\ImagePractice.aspx.cs (Line 25).
+Removed attribute AutoEventWireup from file pr\index.aspx.
+Removed attribute Codebehind from file pr\index.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\index.aspx.cs (Line 20).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file pr\index.aspx.cs (Line 44).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file pr\index.aspx.cs (Line 49).
+Warning: Access level of 'Button3_Click' changed to 'protected' in file pr\index.aspx.cs (Line 54).
+Warning: Access level of 'Button4_Click' changed to 'protected' in file pr\index.aspx.cs (Line 59).
+Warning: Access level of 'Button5_Click' changed to 'protected' in file pr\index.aspx.cs (Line 64).
+Warning: Access level of 'Button6_Click' changed to 'protected' in file pr\index.aspx.cs (Line 69).
+Warning: Access level of 'Button7_Click' changed to 'protected' in file pr\index.aspx.cs (Line 74).
+Warning: Access level of 'Button8_Click' changed to 'protected' in file pr\index.aspx.cs (Line 79).
+Warning: Access level of 'Button9_Click' changed to 'protected' in file pr\index.aspx.cs (Line 84).
+Warning: Access level of 'Button10_Click' changed to 'protected' in file pr\index.aspx.cs (Line 89).
+Warning: Access level of 'Button11_Click' changed to 'protected' in file pr\index.aspx.cs (Line 94).
+Warning: Access level of 'Button12_Click' changed to 'protected' in file pr\index.aspx.cs (Line 99).
+Warning: Access level of 'Button13_Click' changed to 'protected' in file pr\index.aspx.cs (Line 104).
+Warning: Access level of 'Button14_Click' changed to 'protected' in file pr\index.aspx.cs (Line 109).
+Removed attribute AutoEventWireup from file pr\l_employeedependent.aspx.
+Removed attribute Codebehind from file pr\l_employeedependent.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\L_EmployeeDependent.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file pr\login.aspx.
+Removed attribute Codebehind from file pr\login.aspx.
+'Reference' tag with reference to '~/login.aspx' added to file pr\login.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\login.aspx.cs (Line 25).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file pr\login.aspx.cs (Line 50).
+Removed attribute AutoEventWireup from file pr\menu.aspx.
+Removed attribute Codebehind from file pr\menu.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\menu.aspx.cs (Line 21).
+Removed attribute AutoEventWireup from file pr\organizations.aspx.
+Removed attribute Codebehind from file pr\organizations.aspx.
+Removed the id attribute from the <form> tag in file pr\organizations.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\Organizations.aspx.cs (Line 26).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\Organizations.aspx.cs (Line 198).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\Organizations.aspx.cs (Line 215).
+Removed attribute AutoEventWireup from file pr\patientvisitreg.aspx.
+Removed attribute Codebehind from file pr\patientvisitreg.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 61).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 222).
+Warning: Access level of 'Relationddl_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 381).
+Warning: Access level of 'ddlDepartment_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 531).
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\patientvisitreg.aspx.
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 833).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 844).
+Warning: Access level of 'ddlClinic_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 877).
+Warning: Access level of 'rbtnlPType_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 1035).
+Warning: Access level of 'PTitleddl_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 1122).
+Warning: Access level of 'BloodGroupddl_SelectedIndexChanged' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 1179).
+Warning: Access level of 'btnCNEGo_Click' changed to 'protected' in file pr\PatientVisitReg.aspx.cs (Line 1184).
+Removed attribute AutoEventWireup from file pr\rankentry.aspx.
+Removed attribute Codebehind from file pr\rankentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\RankEntry.aspx.cs (Line 26).
+Warning: Access level of 'ddlEmpClass_SelectedIndexChanged' changed to 'protected' in file pr\RankEntry.aspx.cs (Line 205).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\RankEntry.aspx.cs (Line 222).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\RankEntry.aspx.cs (Line 235).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\RankEntry.aspx.cs (Line 248).
+Removed attribute AutoEventWireup from file pr\sectionentry2.aspx.
+Removed attribute Codebehind from file pr\sectionentry2.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\SectionEntry2.aspx.cs (Line 24).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\SectionEntry2.aspx.cs (Line 162).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\SectionEntry2.aspx.cs (Line 331).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\SectionEntry2.aspx.cs (Line 345).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\SectionEntry2.aspx.cs (Line 356).
+Removed attribute AutoEventWireup from file pr\serviceentry.aspx.
+Removed attribute Codebehind from file pr\serviceentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\ServiceEntry.aspx.cs (Line 25).
+Warning: Access level of 'ddlDepartment_SelectedIndexChanged' changed to 'protected' in file pr\ServiceEntry.aspx.cs (Line 82).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\ServiceEntry.aspx.cs (Line 247).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\ServiceEntry.aspx.cs (Line 262).
+Removed attribute AutoEventWireup from file pr\servicerateentry.aspx.
+Removed attribute Codebehind from file pr\servicerateentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\ServiceRateEntry.aspx.cs (Line 26).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\ServiceRateEntry.aspx.cs (Line 92).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\ServiceRateEntry.aspx.cs (Line 198).
+Warning: Access level of 'ddlService_SelectedIndexChanged' changed to 'protected' in file pr\ServiceRateEntry.aspx.cs (Line 218).
+Warning: Access level of 'ddlClass_SelectedIndexChanged' changed to 'protected' in file pr\ServiceRateEntry.aspx.cs (Line 232).
+Removed attribute AutoEventWireup from file pr\specialityentry.aspx.
+Removed attribute Codebehind from file pr\specialityentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\SpecialityEntry.aspx.cs (Line 27).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\SpecialityEntry.aspx.cs (Line 165).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\SpecialityEntry.aspx.cs (Line 184).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\SpecialityEntry.aspx.cs (Line 193).
+Removed attribute AutoEventWireup from file pr\specialtytype.aspx.
+Removed attribute Codebehind from file pr\specialtytype.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\SpecialtyType.aspx.cs (Line 25).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\SpecialtyType.aspx.cs (Line 61).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\SpecialtyType.aspx.cs (Line 148).
+Removed attribute AutoEventWireup from file pr\staffentry.aspx.
+Removed attribute Codebehind from file pr\staffentry.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 27).
+Warning: Access level of 'lbtnSave_Click' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 503).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 539).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 556).
+Warning: Access level of 'btnValidLogin_Click' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 572).
+Warning: Access level of 'ddlTitle_SelectedIndexChanged' changed to 'protected' in file pr\StaffEntry.aspx.cs (Line 664).
+Removed attribute AutoEventWireup from file pr\--reports\clsreportprint.aspx.
+Removed attribute Codebehind from file pr\--reports\clsreportprint.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\clsReportPrint.aspx.cs (Line 30).
+Removed attribute AutoEventWireup from file pr\--reports\generalreports.aspx.
+Removed attribute Codebehind from file pr\--reports\generalreports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\GeneralReports.aspx.cs (Line 76).
+Removed attribute AutoEventWireup from file pr\--reports\prreports.aspx.
+Removed attribute Codebehind from file pr\--reports\prreports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 27).
+Warning: Access level of 'ddlOrganization_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 100).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 107).
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\prreports.aspx.
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 237).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 253).
+Warning: Access level of 'rbtnDate_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PRReports.aspx.cs (Line 274).
+Removed attribute AutoEventWireup from file pr\--reports\pvreport.aspx.
+Removed attribute Codebehind from file pr\--reports\pvreport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 25).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 100).
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\pvreport.aspx.
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 171).
+Warning: Access level of 'rbtnDate_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 187).
+Warning: Access level of 'ddlOrganization_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 222).
+Warning: Access level of 'btnCriteria_SelectedIndexChanged' changed to 'protected' in file pr\--reports\PVReport.aspx.cs (Line 229).
+Removed attribute AutoEventWireup from file pr\--reports\rbloodgroup.aspx.
+Removed attribute Codebehind from file pr\--reports\rbloodgroup.aspx.
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\rbloodgroup.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RBloodGroup.aspx.cs (Line 243).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RBloodGroup.aspx.cs (Line 281).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\RBloodGroup.aspx.cs (Line 287).
+Warning: Access level of 'rbtnCriteria_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RBloodGroup.aspx.cs (Line 296).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RBloodGroup.aspx.cs (Line 310).
+Removed attribute AutoEventWireup from file pr\--reports\rclass.aspx.
+Removed attribute Codebehind from file pr\--reports\rclass.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RClass.aspx.cs (Line 20).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file pr\--reports\RClass.aspx.cs (Line 44).
+Removed attribute AutoEventWireup from file pr\--reports\rclinic.aspx.
+Removed attribute Codebehind from file pr\--reports\rclinic.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RClinic.aspx.cs (Line 21).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file pr\--reports\RClinic.aspx.cs (Line 58).
+Removed attribute AutoEventWireup from file pr\--reports\rdepartment.aspx.
+Removed attribute Codebehind from file pr\--reports\rdepartment.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RDepartment.aspx.cs (Line 20).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file pr\--reports\RDepartment.aspx.cs (Line 44).
+Removed attribute AutoEventWireup from file pr\--reports\rdependent.aspx.
+Removed attribute Codebehind from file pr\--reports\rdependent.aspx.
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\rdependent.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RDependent.aspx.cs (Line 163).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RDependent.aspx.cs (Line 180).
+Warning: Access level of 'rbtnCriteria_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RDependent.aspx.cs (Line 186).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\RDependent.aspx.cs (Line 200).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RDependent.aspx.cs (Line 206).
+Removed attribute AutoEventWireup from file pr\--reports\rdoctor.aspx.
+Removed attribute Codebehind from file pr\--reports\rdoctor.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RDoctor.aspx.cs (Line 20).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file pr\--reports\RDoctor.aspx.cs (Line 44).
+Removed attribute AutoEventWireup from file pr\--reports\remployee.aspx.
+Removed attribute Codebehind from file pr\--reports\remployee.aspx.
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\remployee.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\REmployee.aspx.cs (Line 161).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\REmployee.aspx.cs (Line 177).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\REmployee.aspx.cs (Line 183).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\REmployee.aspx.cs (Line 189).
+Removed attribute AutoEventWireup from file pr\--reports\reports.aspx.
+Removed attribute Codebehind from file pr\--reports\reports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\Reports.aspx.cs (Line 26).
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\reports.aspx.
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\Reports.aspx.cs (Line 266).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\Reports.aspx.cs (Line 289).
+Warning: Access level of 'rbtnCriteria_SelectedIndexChanged' changed to 'protected' in file pr\--reports\Reports.aspx.cs (Line 327).
+Warning: Access level of 'rbtnDate_SelectedIndexChanged' changed to 'protected' in file pr\--reports\Reports.aspx.cs (Line 364).
+Removed attribute AutoEventWireup from file pr\--reports\rfactory.aspx.
+Removed attribute Codebehind from file pr\--reports\rfactory.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RFactory.aspx.cs (Line 25).
+Removed attribute AutoEventWireup from file pr\--reports\rnewregistration.aspx.
+Removed attribute Codebehind from file pr\--reports\rnewregistration.aspx.
+'Reference' tag with reference to '~/pr/--reports/generalreports.aspx' added to file pr\--reports\rnewregistration.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RNewRegistration.aspx.cs (Line 238).
+Warning: Access level of 'rbtnDate_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RNewRegistration.aspx.cs (Line 276).
+Warning: Access level of 'btnGo_Click' changed to 'protected' in file pr\--reports\RNewRegistration.aspx.cs (Line 308).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RNewRegistration.aspx.cs (Line 319).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RNewRegistration.aspx.cs (Line 328).
+Removed attribute AutoEventWireup from file pr\--reports\rpatientvisitent.aspx.
+Removed attribute Codebehind from file pr\--reports\rpatientvisitent.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RPatientVisitENT.aspx.cs (Line 29).
+Warning: Access level of 'Calendar1_SelectionChanged' changed to 'protected' in file pr\--reports\RPatientVisitENT.aspx.cs (Line 53).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file pr\--reports\RPatientVisitENT.aspx.cs (Line 61).
+Removed attribute AutoEventWireup from file pr\--reports\rrank.aspx.
+Removed attribute Codebehind from file pr\--reports\rrank.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RRank.aspx.cs (Line 21).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file pr\--reports\RRank.aspx.cs (Line 37).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RRank.aspx.cs (Line 60).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RRank.aspx.cs (Line 107).
+Removed attribute AutoEventWireup from file pr\--reports\rsection.aspx.
+Removed attribute Codebehind from file pr\--reports\rsection.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RSection.aspx.cs (Line 21).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file pr\--reports\RSection.aspx.cs (Line 37).
+Warning: Access level of 'ddlSection_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RSection.aspx.cs (Line 73).
+Warning: Access level of 'ddlType_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RSection.aspx.cs (Line 78).
+Removed attribute AutoEventWireup from file pr\--reports\rservice.aspx.
+Removed attribute Codebehind from file pr\--reports\rservice.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RService.aspx.cs (Line 21).
+Warning: Access level of 'ddlDepartment_SelectedIndexChanged' changed to 'protected' in file pr\--reports\RService.aspx.cs (Line 40).
+Warning: Access level of 'lbtnPrint_Click' changed to 'protected' in file pr\--reports\RService.aspx.cs (Line 45).
+Removed attribute AutoEventWireup from file pr\--reports\rspeciality.aspx.
+Removed attribute Codebehind from file pr\--reports\rspeciality.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\--reports\RSpeciality.aspx.cs (Line 20).
+Warning: Access level of 'LinkButton1_Click' changed to 'protected' in file pr\--reports\RSpeciality.aspx.cs (Line 44).
+Removed attribute AutoEventWireup from file pr\search\esearch.aspx.
+Removed attribute Codebehind from file pr\search\esearch.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\search\ESearch.aspx.cs (Line 23).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file pr\search\ESearch.aspx.cs (Line 85).
+Warning: Access level of 'ddlFactoryType_SelectedIndexChanged' changed to 'protected' in file pr\search\ESearch.aspx.cs (Line 165).
+Warning: Access level of 'ddlFactory_SelectedIndexChanged' changed to 'protected' in file pr\search\ESearch.aspx.cs (Line 212).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\search\ESearch.aspx.cs (Line 230).
+'Reference' tag with reference to '~/pr/index.aspx' added to file pr\search\esearch.aspx.
+Removed attribute AutoEventWireup from file pr\search\hstaffsearch.aspx.
+Removed attribute Codebehind from file pr\search\hstaffsearch.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\search\HStaffSearch.aspx.cs (Line 44).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file pr\search\HStaffSearch.aspx.cs (Line 79).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\search\HStaffSearch.aspx.cs (Line 147).
+Warning: Access level of 'ddlSpType_SelectedIndexChanged' changed to 'protected' in file pr\search\HStaffSearch.aspx.cs (Line 171).
+Removed attribute AutoEventWireup from file pr\search\psearch.aspx.
+Removed attribute Codebehind from file pr\search\psearch.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file pr\search\PSearch.aspx.cs (Line 24).
+Warning: Access level of 'lbtnClearAll_Click' changed to 'protected' in file pr\search\PSearch.aspx.cs (Line 154).
+Warning: Access level of 'ddlDepartment_SelectedIndexChanged' changed to 'protected' in file pr\search\PSearch.aspx.cs (Line 176).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file pr\search\PSearch.aspx.cs (Line 197).
+Added folder App_Code.
+Moved file Global.asax.cs to the App_Code\ directory.
+Added folder App_Code\LIMS\WebForms.
+Moved file lims\webforms\webuifacade.cs to the App_Code\LIMS\WebForms\ directory.
+Moved file SComponents.cs to the App_Code\ directory.
+Moved file AssemblyInfo.cs to the App_Code\ directory.
+Changed HTML validation schema for all projects to 'Internet Explorer 6.0'.
+Removed file Bin\HMIS.dll.
+Removed file Bin\HMIS.pdb.
+Removed file HMIS.csproj.
+Removed file HMIS.csproj.webinfo.
+Project HMIS.csproj has been converted successfully at March 04 2007, 11:11:27.

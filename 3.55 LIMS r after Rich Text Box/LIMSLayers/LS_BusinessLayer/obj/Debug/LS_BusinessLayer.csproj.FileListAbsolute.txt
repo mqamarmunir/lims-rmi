@@ -1,0 +1,74 @@
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\LIMS r\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.csprojResolveAssemblyReference.cache
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll.config
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll.config
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll.config
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll.config
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.dll
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_BusinessLayer.pdb
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.dll
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\bin\Debug\LS_DataLayer.pdb
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.csprojResolveAssemblyReference.cache
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.dll
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\LS_BusinessLayer\obj\Debug\LS_BusinessLayer.pdb

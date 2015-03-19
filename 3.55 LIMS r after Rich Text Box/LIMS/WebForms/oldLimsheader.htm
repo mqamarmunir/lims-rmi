@@ -1,0 +1,198 @@
+<HTML>
+	<HEAD>
+		<TITLE>mockup4-LIMS</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<link href="style.css" rel="stylesheet" type="text/css">
+			<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+			</script>
+			<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->			
+			</script>
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0"
+		onLoad="MM_preloadImages('images/patient-queue2.gif','images/parameters2.gif','images/transaction2.gif','images/reports2.gif')">
+		<!-- ImageReady Slices (mockup4-LIMS.psd) -->
+		<div id="patameter" style="Z-INDEX:1; LEFT:10px; VISIBILITY:hidden; WIDTH:100%; POSITION:absolute; TOP:82px; HEIGHT:27px">
+			<table width="100%" height="100%" ID="Table1">
+				<tr>
+					<td class="menumid" onMouseOver="MM_swapImage('parameter','','images/parameters2.gif',1)"
+						onMouseOut="MM_swapImage('parameter','','images/index_08.gif',1)">
+						<a href="wfrmTestGroup.aspx" class="menumid">Test Group</a> <a href="wfrmTest.aspx" class="menumid">
+							Test</a> <a href="wfrmTestAttribute.aspx" class="menumid">Test Attribute</a>
+						<a href="wfrmAttributeRange.aspx" class="menumid">Attribute Range</a> <a href="wfrmBatchedTests.aspx" class="menumid">
+							Test Batching</a> 
+						<!-- <a href="wfrmRole.aspx" class="menumid">Role</a> -->
+						<a href="wfrmMethod.aspx" class="menumid">Method</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="transaction" style="Z-INDEX:1; LEFT:10px; VISIBILITY:hidden; WIDTH:100%; POSITION:absolute; TOP:82px; HEIGHT:27px">
+			<table width="100%" height="100%" ID="Table2">
+				<tr>
+					<td class="menumid" onMouseOver="MM_swapImage('transcation','','images/transaction2.gif',1)">
+						<a href="wfrmSpecimenCollection.aspx" class="menumid">Specimen Collection</a> | <a href="wfrmWorkList.aspx" class="menumid">
+							Work List</a> | <a href="wfrmGeneralTestResult.aspx?pageid=r" class="menumid">
+							Result Entry</a> | <a href="wfrmGeneralTestResult.aspx?pageid=v" class="menumid">
+							Verification</a> 
+						<!--<a href="wfrmResultDispatcher.aspx" class="menumid">Result Dispatch</a>
+						<a href="wfrmMisc.aspx" class="menumid">Misc.</a>
+						<a href="wfrmDuesReceiving.aspx" class="menumid">Dues Receiving.</a> -->
+						</font></font></font>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="reportmenu" style="Z-INDEX:1; LEFT:10px; VISIBILITY:hidden; WIDTH:100%; POSITION:absolute; TOP:82px; HEIGHT:27px">
+			<table width="100%" height="100%" ID="Table3">
+				<tr>
+					<td class="menumid" onMouseOver="MM_swapImage('transcation','','images/transaction2.gif',1)"
+						onMouseOut="MM_swapImage('transcation','','images/index_09.gif',1)">
+						<a href="wfrmReport.aspx" class="menumid">Daily Return</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="wfrmUnderconstruction.aspx" class="menumid">Report2</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="wfrmUnderconstruction.aspx" class="menumid">Report3</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="wfrmUnderconstruction.aspx" class="menumid">Report4</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="wfrmUnderconstruction.aspx" class="menumid">Report5</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="wfrmUnderconstruction.aspx" class="menumid">Report6</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+					</td>
+				</tr>
+			</table>
+		</div>
+		<table width="1000" border="0" cellpadding="0" cellspacing="0" ID="Table4">
+			<tr>
+				<td rowspan="4" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_01.gif" alt="" name="Image1" width="226" height="89" id="Image1"></td>
+				<td colspan="18" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_02.gif" width="774" height="5" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="5" alt=""></td>
+			</tr>
+			<tr>
+				<td colspan="13" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_03.gif" width="664" height="13" alt=""></td>
+				<td colspan="2" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_04.gif" width="52" height="13" alt=""></td>
+				<td colspan="3" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_05.gif" width="58" height="13" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="13" alt=""></td>
+			</tr>
+			<tr>
+				<td colspan="18" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_06.gif" width="774" height="33" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="33" alt=""></td>
+			</tr>
+			<tr>
+				<td onClick="MM_showHideLayers('patameter','','show','transaction','','hide','reportmenu','','hide')">
+					<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('parameter','','images/parameters2.gif',1)">
+						<img src="images/index_07.gif" name="parameter" width="128" height="38" border="0" id="parameter"></a></td>
+				<td onClick="MM_showHideLayers('patameter','','hide','transaction','','show','reportmenu','','hide')">
+					<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('trans','','images/transaction2.gif',1)">
+						<img src="images/index_09.gif" name="trans" width="128" height="38" border="0"></a></td>
+				<td colspan="5" onClick="MM_showHideLayers('patameter','','hide','transaction','','hide','reportmenu','','show')">
+					<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('report','','images/reports2.gif',1)">
+						<img src="images/reports1.gif" name="report" width="128" height="38" border="0"></a></td>
+				<td colspan="11" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+					<img src="images/index_10.gif" width="389" height="38" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="38" alt=""></td>
+			</tr>
+			<tr>
+				<td height="15" colspan="19" bgcolor="#ca2300" onMouseOut="MM_showHideLayers('patameter','','hide','transaction','','hide')">
+				</td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="9" alt=""></td>
+			</tr>
+			<tr>
+				<td colspan="19" bgcolor="#e68500">
+					<!-- <td colspan="19" bgcolor="E68500" onMouseOver="MM_showHideLayers('patameter','','hide','transaction','','hide')"> -->
+				</td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="10" alt=""></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>
+					<img src="images/spacer.gif" width="226" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="128" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="129" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="2" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="4" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="83" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="3" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="36" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="42" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="7" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="82" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="81" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="7" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="60" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="22" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="30" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="51" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+				<td>
+					<img src="images/spacer.gif" width="6" height="1" alt=""></td>
+				<td></td>
+			</tr>
+		</table>
+		<!-- End ImageReady Slices -->
+	</BODY>
+</HTML>

@@ -1,0 +1,7 @@
+bin\Debug\HimsBLRegistration.dll
+bin\Debug\HimsBLRegistration.pdb
+bin\Debug\HimsDlRegistration.dll
+bin\Debug\HimsDlRegistration.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\HimsBLRegistration.dll
+obj\Debug\HimsBLRegistration.pdb

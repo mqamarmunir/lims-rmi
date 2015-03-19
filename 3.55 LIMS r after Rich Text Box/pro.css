@@ -1,0 +1,93 @@
+/***** menu CSS *****/
+@media print {
+/*A l'impression on cache le menu, marche au moins pour IE, Moz et Opéra.*/
+	.menu, .ssmenu {
+		visibility:hidden;
+	}
+}
+
+.menu, .ssmenu {
+	background-color:#F0F0F0;
+	color:#6D6D6C;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial,Verdana;
+	border:1px solid #CDCDCC;
+	padding:0px;
+/* width et margin sont au cas où le javascript est désactivé. */
+	width:15em;
+	margin:1em;
+}
+
+/* .menu = les cases toujours visibles (comme Fichier, Edition... dans un logiciel) */
+.menu {
+	text-align:center;
+	background: url("pro/pro2.jpg") #F0F0F0;
+	color:#969695;
+}
+
+.menu span, .ssmenu span {
+/* Ne pas toucher
+	C'est pour cacher les ; en fin de <li>, ce qui permet aux synthèse vocales de prendre une
+	pause dans l'élocution */
+	display:none;
+}
+.ssmenu ul,.ssmenu li{
+/* Ne pas trop toucher.
+	Les items (les <li>) des sous-menus, notamment pour enlever les puces des liste */
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	border-bottom: 1px solid #CDCDCC;
+	border-right: 1px solid #CDCDCC;
+}
+.menu a, .ssmenu a, .menu a:visited, .ssmenu a:visited {
+/* Les liens qui ne sont pas sous le curseur. */
+	color:#969695;
+	padding:2px;
+	text-decoration:none;
+	font-family:Arial,Verdana;
+/* Ne pas modifier le block */
+	display:block;
+/*	Ne pas toucher ces 2 lignes */
+	margin:0px;
+	width:100%;
+}
+.ssmenu a, .ssmenu a:visited {
+	padding-left:5px;
+}
+html>body .menu a, html>body .menu a:visited, html>body .menu a:hover, html>body .menu a:active,
+html>body .ssmenu a, html>body .ssmenu a:visited, html>body .ssmenu a:hover, html>body .ssmenu a:active {
+	width:auto;
+}
+
+.ssmenu ul:hover, .ssmenu a:hover, .ssmenu a:focus, .menu a:hover, .menu a:focus {
+/* Les liens sous le curseur.
+	On change les couleurs du texte et de fond, et on enlève le soulignement.*/
+	background: url("pro/pro1.jpg");
+	color:black;
+	text-decoration:none;
+	font-family:Arial,Verdana;
+	margin:0px;
+	width:100%;
+}
+
+img {
+/* Si on met une image dans un lien (par exemple un logo à gauche du lien), pas de bordure
+	car c'est vilain :-p */
+	border:none;
+}
+
+.ssmenu img {
+/* un petit espacement entre l'image et le texte du lien <a href="..."><img.../>blabla</a> */
+	margin-right:8px;
+}
+.ssmenu img.hr {
+	margin-top:1px;
+	margin-bottom:1px;
+	margin-left:0;
+	margin-right:0;
+	width:100%;
+	height:1px;
+	display:block;
+}

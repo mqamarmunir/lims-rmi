@@ -1,0 +1,1570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0074)http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm -->
+<HTML lang=en-US><HEAD><TITLE>Data Concurrency and Consistency</TITLE>
+<META content=DefaultSingle name=Page>
+<META content=" Data Concurrency and Consistency " name=Title><LINK 
+title=Library href="../../index.htm" rel=home><LINK title=Contents 
+href="toc.htm" rel=toc><LINK title=Index href="index.htm" rel=index><LINK 
+title=Copyright href="../../dcommon/html/cpyr.htm" rel=copyright><LINK title=Up 
+href="toc.htm" rel=up><LINK title=Next href="c22integ.htm" rel=next><LINK 
+title=Previous href="part_7.htm" rel=previous>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+title=Default href="Data Concurrency and Consistency_files/doccd.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2800.1579" name=GENERATOR></HEAD>
+<BODY bgColor=white><A name=top></A><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#BEGIN">Skip 
+Headers</A><BR><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" summary="">
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left><FONT face="Helvetica, Arial, sans-serif" 
+      color=#330099><STRONG>Oracle9<I>i</I> Database Concepts<BR>Release 2 
+      (9.2)</STRONG><BR>Part Number A96524-01</FONT></TD>
+    <TD vAlign=bottom align=right width=144>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary="">
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="16%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/index.htm"><IMG 
+            alt="Go To Documentation Library" 
+            src="Data Concurrency and Consistency_files/prodicon.gif" 
+            border=0><BR><FONT size=-2>Home</FONT></A></TD>
+          <TD vAlign=top align=middle width="17%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/nav/docindex.htm"><IMG 
+            alt="Go To Product List" 
+            src="Data Concurrency and Consistency_files/bookicon.gif" 
+            border=0><BR><FONT size=-2>Book List</FONT></A></TD>
+          <TD vAlign=top align=middle width="17%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/toc.htm"><IMG 
+            alt="Go To Table Of Contents" 
+            src="Data Concurrency and Consistency_files/conticon.gif" 
+            border=0><BR><FONT size=-2>Contents</FONT></A></TD>
+          <TD vAlign=top align=middle width="20%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/index.htm"><IMG 
+            alt="Go To Index" 
+            src="Data Concurrency and Consistency_files/indxicon.gif" 
+            border=0><BR><FONT size=-2>Index</FONT></A></TD><!--  mix  -->
+          <TD vAlign=top align=middle width="17%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/mix.920/a96625/toc.htm"><IMG 
+            alt="" src="Data Concurrency and Consistency_files/mix.gif" 
+            border=0><BR><FONT size=-2>Master Index</FONT></A></TD><!--  fdbk  -->
+          <TD vAlign=top align=middle width="17%"><A 
+            href="http://www.lc.leidenuniv.nl/awcourse/oracle/dcommon/html/feedback.htm"><IMG 
+            alt="" src="Data Concurrency and Consistency_files/feedback.gif" 
+            border=0><BR><FONT 
+  size=-2>Feedback</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<HR>
+
+<P><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/part_7.htm"><IMG 
+alt="Go to previous page" 
+src="Data Concurrency and Consistency_files/larrow.gif" border=0></A> <A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c22integ.htm"><IMG 
+alt="Go to next page" src="Data Concurrency and Consistency_files/rarrow.gif" 
+border=0></A> <A name=BEGIN></A></P>
+<DIV class=IND><!-- End Header --><A name=2414></A><!--TOC=Title-"2414"-->
+<H1 class=Title><FONT face="Arial, Helvetica, sans-serif" color=#330099>20<BR><A 
+name=CNCPT021>Data Concurrency and 
+Consistency</A></FONT></H1><!--/TOC=Title--><A name=2423></A>
+<P class=BP>This chapter explains how Oracle maintains consistent data in a 
+multiuser database environment. The chapter includes:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=2425></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2434">Introduction 
+  to Data Concurrency and Consistency in a Multiuser Environment</A> 
+  <LI class=LB1 type=disc><A name=2427></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2570">How 
+  Oracle Manages Data Concurrency and Consistency</A> 
+  <LI class=LB1 type=disc><A name=2429></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2841">How 
+  Oracle Locks Data</A> 
+  <LI class=LB1 type=disc><A name=20325></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#20178">Flashback 
+  Query</A> </LI></UL><A name=2434></A><!--TOC=h1-"2434"-->
+<H2 class=H1><A name=CNCPT121><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Introduction to Data Concurrency and Consistency in a Multiuser 
+Environment</FONT></A></H2><!--/TOC=h1--><A name=5894></A>
+<P class=BP>In a single-user database, the user can modify data in the database 
+without concern for other users modifying the same data at the same time. 
+However, in a multiuser database, the statements within multiple simultaneous 
+transactions can update the same data. Transactions executing at the same time 
+need to produce meaningful and consistent results. Therefore, control of data 
+concurrency and data consistency is vital in a multiuser database.</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=5897></A><STRONG class=Bold>Data 
+  concurrency</STRONG> means that many users can access data at the same time. 
+  <LI class=LB1 type=disc><A name=5903></A><STRONG class=Bold>Data 
+  consistency</STRONG> means that each user sees a consistent view of the data, 
+  including visible changes made by the user's own transactions and transactions 
+  of other users. </LI></UL><A name=5907></A>
+<P class=BP>To describe consistent transaction behavior when transactions 
+execute at the same time, database researchers have defined a transaction 
+isolation model called <STRONG class=Bold>serializability</STRONG>. The 
+serializable mode of transaction behavior tries to ensure that transactions 
+execute in such a way that they appear to be executed one at a time, or 
+serially, rather than concurrently.</P><A name=2454></A>
+<P class=BP>While this degree of isolation between transactions is generally 
+desirable, running many applications in this mode can seriously compromise 
+application throughput. Complete isolation of concurrently running transactions 
+could mean that one transaction cannot perform an insert into a table being 
+queried by another transaction. In short, real-world considerations usually 
+require a compromise between perfect transaction isolation and 
+performance.</P><A name=2456></A>
+<P class=BP>Oracle offers two isolation levels, providing application developers 
+with operational modes that preserve consistency and provide high 
+performance.</P><A name=18016></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17558></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17559></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c22integ.htm#3191">Chapter&nbsp;21, 
+      "Data Integrity"</A> for information about data integrity, which enforces 
+      business rules associated with a database</P></TD></TR></TBODY></TABLE></DIV><A 
+name=2458></A><!--TOC=h2-"2458"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Preventable 
+Phenomena and Transaction Isolation Levels</FONT></H3><!--/TOC=h2--><A 
+name=2464></A>
+<P class=BP>The ANSI/ISO SQL standard (SQL92) defines four levels of transaction 
+isolation with differing degrees of impact on transaction processing throughput. 
+These isolation levels are defined in terms of three phenomena that must be 
+prevented between concurrently executing transactions.</P><A name=2468></A>
+<P class=BP>The three preventable phenomena are:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=22323></A>Dirty reads: A transaction reads 
+  data that has been written by another transaction that has not been committed 
+  yet. 
+  <LI class=LB1 type=disc><A name=22326></A>Nonrepeatable (fuzzy) reads: A 
+  transaction rereads data it has previously read and finds that another 
+  committed transaction has modified or deleted the data. 
+  <LI class=LB1 type=disc><A name=22333></A>Phantom reads: A transaction 
+  re-executes a query returning a set of rows that satisfies a search condition 
+  and finds that another committed transaction has inserted additional rows that 
+  satisfy the condition. </LI></UL><A name=2495></A>
+<P class=BP>SQL92 defines four levels of isolation in terms of the phenomena a 
+transaction running at a particular isolation level is permitted to experience. 
+They are shown in <A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#18061">Table&nbsp;20-1</A>:</P>
+<H5 class=TT><A name=18070></A><A name=18061></A><STRONG><FONT 
+face="Arial, Helvetica, sans-serif"><EM>Table 20-1 Preventable Read Phenomena by 
+Isolation Level</EM></FONT></STRONG></H5>
+<TABLE class=Formal dir=ltr title="" cellSpacing=0 cellPadding=3 rules=groups 
+width="100%" summary="" border=1 frame=hsides>
+  <THEAD>
+  <TR class=Formal>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=8763></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Isolation 
+    Level</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=8771></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Dirty Read</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=8775></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Nonrepeatable 
+      Read</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=8779></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Phantom 
+  Read</STRONG></FONT></TH></TR></THEAD>
+  <TBODY>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=8784></A>
+      <P class=TB>Read uncommitted</P></TD>
+    <TD class=Formal><A name=8786></A>
+      <P class=TB>Possible</P></TD>
+    <TD class=Formal><A name=8788></A>
+      <P class=TB>Possible</P></TD>
+    <TD class=Formal><A name=8790></A>
+      <P class=TB>Possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=8792></A>
+      <P class=TB>Read committed</P></TD>
+    <TD class=Formal><A name=8794></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=8796></A>
+      <P class=TB>Possible</P></TD>
+    <TD class=Formal><A name=8798></A>
+      <P class=TB>Possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=8801></A>
+      <P class=TB>Repeatable read</P></TD>
+    <TD class=Formal><A name=8803></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=8805></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=8807></A>
+      <P class=TB>Possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=8809></A>
+      <P class=TB>Serializable</P></TD>
+    <TD class=Formal><A name=8811></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=8813></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=8815></A>
+      <P class=TB>Not possible</P></TD></TR></TBODY></TABLE><A name=2497></A>
+<P class=BP>Oracle offers the read committed and serializable isolation levels, 
+as well as a read-only mode that is not part of SQL92. Read committed is the 
+default.</P><A name=18019></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17576></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17577></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2570">"How 
+      Oracle Manages Data Concurrency and Consistency"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2570"></A> 
+      for a full discussion of read committed and serializable isolation 
+      levels</P></TD></TR></TBODY></TABLE></DIV><A name=2499></A><!--TOC=h2-"2499"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Overview of 
+Locking Mechanisms</FONT></H3><!--/TOC=h2--><A name=2505></A>
+<P class=BP>In general, multiuser databases use some form of data locking to 
+solve the problems associated with data concurrency, consistency, and integrity. 
+<STRONG class=Bold>Locks</STRONG> are mechanisms that prevent destructive 
+interaction between transactions accessing the same resource.</P><A 
+name=2507></A>
+<P class=BP>Resources include two general types of objects:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=2509></A>User objects, such as tables and rows 
+  (structures and data) 
+  <LI class=LB1 type=disc><A name=2511></A>System objects not visible to users, 
+  such as shared data structures in the memory and data dictionary rows 
+  <P><A name=18022></A></P>
+  <DIV align=center>
+  <TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+  cellSpacing=0 cellPadding=0 width="80%" 
+  summary="This is a layout table to format a note" border=0>
+    <TBODY>
+    <TR class=NoteAlso>
+      <TD class=NoteAlso><A name=17596></A><FONT 
+        face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+        Also:</STRONG></FONT> <A name=17597></A>
+        <P class=NB><A 
+        href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2841">"How 
+        Oracle Locks Data"</A><A 
+        href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2841"></A> 
+        for more information about locks</P></TD></TR></TBODY></TABLE></DIV></LI></UL><A 
+name=2570></A><!--TOC=h1-"2570"-->
+<H2 class=H1><A name=CNCPT221><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>How Oracle Manages Data Concurrency and 
+Consistency</FONT></A></H2><!--/TOC=h1--><A name=2572></A>
+<P class=BP>Oracle maintains data consistency in a multiuser environment by 
+using a multiversion consistency model and various types of locks and 
+transactions. The following topics are discussed in this section:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=17836></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#17882">Multiversion 
+  Concurrency Control</A> 
+  <LI class=LB1 type=disc><A name=17840></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2611">Statement-Level 
+  Read Consistency</A> 
+  <LI class=LB1 type=disc><A name=17876></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2627">Transaction-Level 
+  Read Consistency</A> 
+  <LI class=LB1 type=disc><A name=17880></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#19443">Read 
+  Consistency with Real Application Clusters</A> 
+  <LI class=LB1 type=disc><A name=17885></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2641">Oracle 
+  Isolation Levels</A> 
+  <LI class=LB1 type=disc><A name=17893></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2778">Comparison 
+  of Read Committed and Serializable Isolation</A> 
+  <LI class=LB1 type=disc><A name=17898></A><A 
+  href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2799">Choice 
+  of Isolation Level</A> </LI></UL><A name=17882></A><!--TOC=h2-"17882"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Multiversion Concurrency Control</FONT></H3><!--/TOC=h2--><A 
+name=2578></A>
+<P class=BP>Oracle automatically provides read consistency to a query so that 
+all the data that the query sees comes from a single point in time <EM 
+class=Italic>(</EM><STRONG class=Bold>statement-level read 
+consistency</STRONG><EM class=Italic>)</EM>. Oracle can also provide read 
+consistency to all of the queries in a transaction <EM 
+class=Italic>(</EM><STRONG class=Bold>transaction-level read 
+consistency</STRONG><EM class=Italic>)</EM>.</P><A name=2580></A>
+<P class=BP>Oracle uses the information maintained in its rollback segments to 
+provide these consistent views. The rollback segments contain the old values of 
+data that have been changed by uncommitted or recently committed transactions. 
+<A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#8842">Figure&nbsp;20-1</A> 
+shows how Oracle provides statement-level read consistency using data in 
+rollback segments.</P><A name=8842></A>
+<H4 class=FT><FONT face="Arial, Helvetica, sans-serif"><EM>Figure 20-1 
+Transactions and Read Consistency</EM></FONT></H4><A name=8846><IMG 
+alt="Text description of cncpt069.gif follows" 
+src="Data Concurrency and Consistency_files/cncpt069.gif"></A><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/img_text/cncpt069.htm"><BR>Text 
+description of the illustration cncpt069.gif</A><BR><BR><A name=8850></A>
+<P class=BP>As a query enters the execution stage, the current system change 
+number (SCN) is determined. In <A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#8842">Figure&nbsp;20-1</A>, 
+this system change number is 10023. As data blocks are read on behalf of the 
+query, only blocks written with the observed SCN are used. Blocks with changed 
+data (more recent SCNs) are reconstructed from data in the rollback segments, 
+and the reconstructed data is returned for the query. Therefore, each query 
+returns all committed data with respect to the SCN recorded at the time that 
+query execution began. Changes of other transactions that occur during a query's 
+execution are not observed, guaranteeing that consistent data is returned for 
+each query.</P><A name=2611></A><!--TOC=h2-"2611"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Statement-Level Read Consistency</FONT></H3><!--/TOC=h2--><A 
+name=2619></A>
+<P class=BP>Oracle always enforces <STRONG class=Bold><EM 
+class=Italic>statement-level</EM></STRONG> read consistency. This guarantees 
+that all the data returned by a single query comes from a single point in 
+time--the time that the query began. Therefore, a query never sees dirty data 
+nor any of the changes made by transactions that commit during query execution. 
+As query execution proceeds, only data committed before the query began is 
+visible to the query. The query does not see changes committed after statement 
+execution begins.</P><A name=21176></A>
+<P class=BP>A consistent result set is provided for every query, guaranteeing 
+data consistency, with no action on the user's part. The SQL statements 
+<CODE>SELECT</CODE>, <CODE>INSERT</CODE> with a subquery, <CODE>UPDATE</CODE>, 
+and <CODE>DELETE</CODE> all query data, either explicitly or implicitly, and all 
+return consistent data. Each of these statements uses a query to determine which 
+data it will affect (<CODE>SELECT</CODE>, <CODE>INSERT</CODE>, 
+<CODE>UPDATE</CODE>, or <CODE>DELETE</CODE>, respectively).</P><A 
+name=21180></A>
+<P class=BP>A <CODE>SELECT</CODE> statement is an explicit query and can have 
+nested queries or a join operation. An <CODE>INSERT</CODE> statement can use 
+nested queries. <CODE>UPDATE</CODE> and <CODE>DELETE</CODE> statements can use 
+<CODE>WHERE</CODE> clauses or subqueries to affect only some rows in a table 
+rather than all rows.</P><A name=21181></A>
+<P class=BP>Queries used in <CODE>INSERT</CODE>, <CODE>UPDATE</CODE>, and 
+<CODE>DELETE</CODE> statements are guaranteed a consistent set of results. 
+However, they do not see the changes made by the DML statement itself. In other 
+words, the query in these operations sees data as it existed before the 
+operation began to make changes.</P><A name=2627></A><!--TOC=h2-"2627"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Transaction-Level Read Consistency</FONT></H3><!--/TOC=h2--><A 
+name=2639></A>
+<P class=BP>Oracle also offers the option of enforcing <STRONG 
+class=Bold>transaction-level read consistency</STRONG><EM class=Italic>.</EM> 
+When a transaction executes in serializable mode, all data accesses reflect the 
+state of the database as of the time the transaction began. This means that the 
+data seen by all queries within the same transaction is consistent with respect 
+to a single point in time, except that queries made by a serializable 
+transaction do see changes made by the transaction itself. Transaction-level 
+read consistency produces repeatable reads and does not expose a query to 
+phantoms.</P><A name=19443></A><!--TOC=h2-"19443"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Read 
+Consistency with Real Application Clusters</FONT></H3><!--/TOC=h2--><A 
+name=19452></A>
+<P class=BP>Real Application Clusters use a cache-to-cache block transfer 
+mechanism known as Cache Fusion to transfer read-consistent images of blocks 
+from one instance to another. Real Application Clusters does this using high 
+speed, low latency interconnects to satisfy remote requests for data 
+blocks.</P><A name=13683></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17614></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17814></A>
+      <P class=NB><EM class=Italic><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/rac.920/a96597/toc.htm">Oracle9i 
+      Real Application Clusters Concepts</A></EM> for more 
+  information</P></TD></TR></TBODY></TABLE></DIV><A name=2641></A><!--TOC=h2-"2641"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Oracle 
+Isolation Levels</FONT></H3><!--/TOC=h2--><A name=2643></A>
+<P class=BP>Oracle provides these transaction isolation levels.</P><A 
+name=22347></A>
+<TABLE class=Informal dir=ltr title="" cellSpacing=0 cellPadding=3 rules=groups 
+width="100%" summary="" border=1 frame=hsides>
+  <THEAD>
+  <TR class=Informal>
+    <TH class=Informal vAlign=bottom scope=col align=left><A 
+      name=22350></A><FONT face="Arial, Helvetica, sans-serif"><STRONG>Isolation 
+      Level</STRONG></FONT></TH>
+    <TH class=Informal vAlign=bottom scope=col align=left><A 
+      name=22352></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Description</STRONG></FONT></TH></TR></THEAD>
+  <TBODY>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22354></A>
+      <P class=TB>Read committed</P></TD>
+    <TD class=Informal><A name=22356></A>
+      <P class=TB>This is the default transaction isolation level. Each query 
+      executed by a transaction sees only data that was committed before the 
+      query (not the transaction) began. An Oracle query never reads dirty 
+      (uncommitted) data. <A name=22376></A></P>
+      <P class=TS>Because Oracle does not prevent other transactions from 
+      modifying the data read by a query, that data can be changed by other 
+      transactions between two executions of the query. Thus, a transaction that 
+      executes a given query twice can experience both nonrepeatable read and 
+      phantoms.</P></TD></TR>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22358></A>
+      <P class=TB>Serializable</P></TD>
+    <TD class=Informal><A name=22386></A>
+      <P class=TS>Serializable transactions see only those changes that were 
+      committed at the time the transaction began, plus those changes made by 
+      the transaction itself through <CODE>INSERT</CODE>, <CODE>UPDATE</CODE>, 
+      and <CODE>DELETE</CODE> statements. Serializable transactions do not 
+      experience nonrepeatable reads or phantoms.</P></TD></TR>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22362></A>
+      <P class=TB>Read-only</P></TD>
+    <TD class=Informal><A name=22395></A>
+      <P class=TS>Read-only transactions see only those changes that were 
+      committed at the time the transaction began and do not allow 
+      <CODE>INSERT</CODE>, <CODE>UPDATE</CODE>, and <CODE>DELETE</CODE> 
+      statements.</P></TD></TR></TBODY></TABLE><A name=2665></A><!--TOC=h3-"2665"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Set the 
+Isolation Level</FONT></H4><!--/TOC=h3--><A name=2669></A>
+<P class=BP>Application designers, application developers, and database 
+administrators can choose appropriate isolation levels for different 
+transactions, depending on the application and workload. You can set the 
+isolation level of a transaction by using one of these statements at the 
+beginning of a transaction:</P><PRE class=CE><A name=2673></A>SET TRANSACTION ISOLATION LEVEL READ COMMITTED; 
+<A name=8655></A>
+<A name=8656></A>SET TRANSACTION ISOLATION LEVEL SERIALIZABLE; 
+<A name=8651></A>
+<A name=8652></A>SET TRANSACTION ISOLATION LEVEL READ ONLY; 
+<A name=8648></A>
+</PRE><A name=2679></A>
+<P class=BP>To save the networking and processing cost of beginning each 
+transaction with a <CODE>SET</CODE> <CODE>TRANSACTION</CODE> statement, you can 
+use the <CODE>ALTER</CODE> <CODE>SESSION</CODE> statement to set the transaction 
+isolation level for all subsequent transactions:</P><PRE class=CE><A name=2681></A>ALTER SESSION SET ISOLATION_LEVEL SERIALIZABLE; 
+<A name=8659></A>
+<A name=8661></A>ALTER SESSION SET ISOLATION_LEVEL READ COMMITTED; 
+<A name=8660></A>
+</PRE><A name=8881></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=8885></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=8886></A>
+      <P class=NB><EM class=Italic><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96540/toc.htm">Oracle9i 
+      SQL Reference</A></EM> for detailed information on any of these SQL 
+      statements</P></TD></TR></TBODY></TABLE></DIV><A name=2689></A><!--TOC=h3-"2689"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Read 
+Committed Isolation</FONT></H4><!--/TOC=h3--><A name=2695></A>
+<P class=BP>The default isolation level for Oracle is read committed. This 
+degree of isolation is appropriate for environments where few transactions are 
+likely to conflict. Oracle causes each query to execute with respect to its own 
+materialized view time, thereby permitting nonrepeatable reads and phantoms for 
+multiple executions of a query, but providing higher potential throughput. Read 
+committed isolation is the appropriate level of isolation for environments where 
+few transactions are likely to conflict.</P><A name=2699></A><!--TOC=h3-"2699"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Serializable Isolation</FONT></H4><!--/TOC=h3--><A name=2705></A>
+<P class=BP>Serializable isolation is suitable for environments:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=6186></A>With large databases and short 
+  transactions that update only a few rows 
+  <LI class=LB1 type=disc><A name=2707></A>Where the chance that two concurrent 
+  transactions will modify the same rows is relatively low 
+  <LI class=LB1 type=disc><A name=2709></A>Where relatively long-running 
+  transactions are primarily read-only </LI></UL><A name=2711></A>
+<P class=BP>Serializable isolation permits concurrent transactions to make only 
+those database changes they could have made if the transactions had been 
+scheduled to execute one after another. Specifically, Oracle permits a 
+serializable transaction to modify a data row only if it can determine that 
+prior changes to the row were made by transactions that had committed when the 
+serializable transaction began.</P><A name=6267></A>
+<P class=BP>To make this determination efficiently, Oracle uses control 
+information stored in the data block that indicates which rows in the block 
+contain committed and uncommitted changes. In a sense, the block contains a 
+recent history of transactions that affected each row in the block. The amount 
+of history that is retained is controlled by the <CODE>INITRANS</CODE> parameter 
+of <CODE>CREATE</CODE> <CODE>TABLE</CODE> and <CODE>ALTER</CODE> 
+<CODE>TABLE</CODE>.</P><A name=6262></A>
+<P class=BP>Under some circumstances, Oracle can have insufficient history 
+information to determine whether a row has been updated by a "too recent" 
+transaction. This can occur when many transactions concurrently modify the same 
+data block, or do so in a very short period. You can avoid this situation by 
+setting higher values of <CODE>INITRANS</CODE>&nbsp;for tables that will 
+experience many transactions updating the same blocks. Doing so enables Oracle 
+to allocate sufficient storage in each block to record the history of recent 
+transactions that accessed the block.</P><A name=2715></A>
+<P class=BP>Oracle generates an error when a serializable transaction tries to 
+update or delete data modified by a transaction that commits <EM 
+class=Italic>after</EM> the serializable transaction began:</P><PRE class=CE><A name=2717></A>ORA-08177: Cannot serialize access for this transaction 
+<A name=8647></A>
+</PRE><A name=8924></A>
+<P class=BP>When a serializable transaction fails with the "Cannot serialize 
+access" error, the application can take any of several actions:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=8925></A>Commit the work executed to that 
+  point 
+  <LI class=LB1 type=disc><A name=8926></A>Execute additional (but different) 
+  statements (perhaps after rolling back to a savepoint established earlier in 
+  the transaction) 
+  <LI class=LB1 type=disc><A name=8927></A>Roll back the entire transaction 
+</LI></UL><A name=8922></A>
+<P class=BP><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#5650">Figure&nbsp;20-2</A> 
+shows an example of an application that rolls back and retries the transaction 
+after it fails with the "Cannot serialize access" error:</P><A name=5650></A>
+<H4 class=FT><FONT face="Arial, Helvetica, sans-serif"><EM>Figure 20-2 
+Serializable Transaction Failure</EM></FONT></H4><A name=7098><IMG 
+alt="Text description of cncpt103.gif follows" 
+src="Data Concurrency and Consistency_files/cncpt103.gif"></A><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/img_text/cncpt103.htm"><BR>Text 
+description of the illustration cncpt103.gif</A><BR><BR><A name=2778></A><!--TOC=h2-"2778"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Comparison 
+of Read Committed and Serializable Isolation</FONT></H3><!--/TOC=h2--><A 
+name=2786></A>
+<P class=BP>Oracle gives the application developer a choice of two transaction 
+isolation levels with different characteristics. Both the read committed and 
+serializable isolation levels provide a high degree of consistency and 
+concurrency. Both levels provide the contention-reducing benefits of Oracle's 
+read consistency multiversion concurrency control model and exclusive row-level 
+locking implementation and are designed for real-world application 
+deployment.</P><A name=2790></A><!--TOC=h3-"2790"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Transaction 
+Set Consistency</FONT></H4><!--/TOC=h3--><A name=6375></A>
+<P class=BP>A useful way to view the read committed and serializable isolation 
+levels in Oracle is to consider the following scenario: Assume you have a 
+collection of database tables (or any set of data), a particular sequence of 
+reads of rows in those tables, and the set of transactions committed at any 
+particular time. An operation (a query or a&nbsp;transaction) is <STRONG 
+class=Bold>transaction set consistent</STRONG> if all its reads return data 
+written by the same set of committed transactions. An operation is not 
+transaction set consistent if some reads reflect the changes of one set of 
+transactions and other reads reflect changes made by other transactions. An 
+operation that is not transaction set consistent in effect sees the database in 
+a state that reflects no single set of committed transactions.</P><A 
+name=2792></A>
+<P class=BP>Oracle provides transactions executing in read committed mode with 
+transaction set consistency for each statement. Serializable mode provides 
+transaction set consistency for each transaction.</P><A name=6404></A>
+<P class=BP><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#9033">Table&nbsp;20-2</A> 
+summarizes key differences between read committed and serializable transactions 
+in Oracle.</P>
+<H5 class=TT><A name=17107></A><A name=9033></A><STRONG><FONT 
+face="Arial, Helvetica, sans-serif"><EM>Table 20-2 Read Committed and 
+Serializable Transactions</EM></FONT></STRONG></H5>
+<TABLE class=Formal dir=ltr title="" cellSpacing=0 cellPadding=3 rules=groups 
+width="100%" summary="" border=1 frame=hsides>
+  <THEAD>
+  <TR class=Formal>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=8989></A></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9046></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Read 
+    Committed</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9050></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Serializable</STRONG></FONT></TH></TR></THEAD>
+  <TBODY>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9057></A>
+      <P class=TB>Dirty write</P></TD>
+    <TD class=Formal><A name=9059></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=9061></A>
+      <P class=TB>Not possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9064></A>
+      <P class=TB>Dirty read</P></TD>
+    <TD class=Formal><A name=9066></A>
+      <P class=TB>Not possible</P></TD>
+    <TD class=Formal><A name=9068></A>
+      <P class=TB>Not possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9071></A>
+      <P class=TB>Nonrepeatable read</P></TD>
+    <TD class=Formal><A name=9073></A>
+      <P class=TB>Possible</P></TD>
+    <TD class=Formal><A name=9075></A>
+      <P class=TB>Not possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9078></A>
+      <P class=TB>Phantoms</P></TD>
+    <TD class=Formal><A name=9080></A>
+      <P class=TB>Possible</P></TD>
+    <TD class=Formal><A name=9082></A>
+      <P class=TB>Not possible</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9085></A>
+      <P class=TB>Compliant with ANSI/ISO SQL 92</P></TD>
+    <TD class=Formal><A name=9087></A>
+      <P class=TB>Yes</P></TD>
+    <TD class=Formal><A name=9089></A>
+      <P class=TB>Yes</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9092></A>
+      <P class=TB>Read materialized view time</P></TD>
+    <TD class=Formal><A name=9094></A>
+      <P class=TB>Statement</P></TD>
+    <TD class=Formal><A name=9096></A>
+      <P class=TB>Transaction</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9099></A>
+      <P class=TB>Transaction set consistency</P></TD>
+    <TD class=Formal><A name=9101></A>
+      <P class=TB>Statement level</P></TD>
+    <TD class=Formal><A name=9103></A>
+      <P class=TB>Transaction level</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9106></A>
+      <P class=TB>Row-level locking</P></TD>
+    <TD class=Formal><A name=9108></A>
+      <P class=TB>Yes</P></TD>
+    <TD class=Formal><A name=9110></A>
+      <P class=TB>Yes</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9113></A>
+      <P class=TB>Readers block writers</P></TD>
+    <TD class=Formal><A name=9115></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9117></A>
+      <P class=TB>No</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9120></A>
+      <P class=TB>Writers block readers</P></TD>
+    <TD class=Formal><A name=9122></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9124></A>
+      <P class=TB>No</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9127></A>
+      <P class=TB>Different-row writers block writers</P></TD>
+    <TD class=Formal><A name=9129></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9131></A>
+      <P class=TB>No</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9134></A>
+      <P class=TB>Same-row writers block writers</P></TD>
+    <TD class=Formal><A name=9136></A>
+      <P class=TB>Yes</P></TD>
+    <TD class=Formal><A name=9138></A>
+      <P class=TB>Yes</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9141></A>
+      <P class=TB>Waits for blocking transaction</P></TD>
+    <TD class=Formal><A name=9143></A>
+      <P class=TB>Yes</P></TD>
+    <TD class=Formal><A name=9145></A>
+      <P class=TB>Yes</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9148></A>
+      <P class=TB>Subject to "cannot serialize access"</P></TD>
+    <TD class=Formal><A name=9150></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9152></A>
+      <P class=TB>Yes</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9155></A>
+      <P class=TB>Error after blocking transaction terminatess</P></TD>
+    <TD class=Formal><A name=9157></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9159></A>
+      <P class=TB>No</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9161></A>
+      <P class=TB>Error after blocking transaction commits</P></TD>
+    <TD class=Formal><A name=9163></A>
+      <P class=TB>No</P></TD>
+    <TD class=Formal><A name=9165></A>
+      <P class=TB>Yes</P></TD></TR></TBODY></TABLE><A name=6297></A><!--TOC=h3-"6297"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Row-Level 
+Locking</FONT></H4><!--/TOC=h3--><A name=6299></A>
+<P class=BP>Both read committed and serializable transactions use row-level 
+locking, and both will wait if they try to change a row updated by an 
+uncommitted concurrent transaction. The second transaction that tries to update 
+a given row waits for the other transaction to commit or roll back and release 
+its lock. If that other transaction rolls back, the waiting transaction, 
+regardless of its isolation mode, can proceed to change the previously locked 
+row as if the other transaction had not existed.</P><A name=6298></A>
+<P class=BP>However, if the other blocking transaction commits and releases its 
+locks, a read committed transaction proceeds with its intended update. A 
+serializable transaction, however, fails with the error "Cannot serialize 
+access", because the other transaction has committed a change that was made 
+since the serializable transaction began.</P><A name=6321></A><!--TOC=h3-"6321"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Referential 
+Integrity</FONT></H4><!--/TOC=h3--><A name=6323></A>
+<P class=BP>Because Oracle does not use read locks in either read-consistent or 
+serializable transactions, data read by one transaction can be overwritten by 
+another. Transactions that perform database consistency checks at the 
+application level cannot assume that the data they read will remain unchanged 
+during the execution of the transaction even though such changes are not visible 
+to the transaction. Database inconsistencies can result unless such 
+application-level consistency checks are coded with this in mind, even when 
+using serializable transactions.</P><A name=9172></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=9175></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=9176></A>
+      <P class=NB><EM class=Italic><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/appdev.920/a96590/toc.htm">Oracle9i 
+      Application Developer's Guide - Fundamentals</A></EM> for more information 
+      about referential integrity and serializable 
+transactions</P></TD></TR></TBODY></TABLE></DIV><A name=6330></A>
+<DIV align=center>
+<TABLE class=Note dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=Note>
+    <TD class=Note>
+      <HR>
+      <A name=18212></A><FONT face="Arial, Helvetica, sans-serif"><STRONG 
+      class=NH>Note:</STRONG></FONT> <A name=18213></A>
+      <P class=NB>You can use both read committed and serializable transaction 
+      isolation levels with Real Application Clusters.</P>
+      <HR>
+    </TD></TR></TBODY></TABLE></DIV><A name=6347></A><!--TOC=h3-"6347"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Distributed 
+Transactions</FONT></H4><!--/TOC=h3--><A name=6333></A>
+<P class=BP>In a distributed database environment, a given transaction updates 
+data in multiple physical databases protected by two-phase commit to ensure all 
+nodes or none commit. In such an environment, all servers, whether Oracle or 
+non-Oracle, that participate in a <STRONG class=Bold>serializable</STRONG> 
+transaction are required to support serializable isolation mode.</P><A 
+name=6358></A>
+<P class=BP>If a serializable transaction tries to update data in a database 
+managed by a server that does not support serializable transactions, the 
+transaction receives an error. The transaction can roll back and retry only when 
+the remote server does support serializable transactions.</P><A name=6369></A>
+<P class=BP>In contrast, <STRONG class=Bold>read committed</STRONG> transactions 
+can perform distributed transactions with servers that do not support 
+serializable transactions.</P><A name=18028></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17908></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17909></A>
+      <P class=NB><EM class=Italic><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96521/toc.htm">Oracle9i 
+      Database Administrator's Guide</A></EM></P></TD></TR></TBODY></TABLE></DIV><A 
+name=2799></A><!--TOC=h2-"2799"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Choice of 
+Isolation Level</FONT></H3><!--/TOC=h2--><A name=2803></A>
+<P class=BP>Application designers and developers should choose an isolation 
+level based on application performance and consistency needs as well as 
+application coding requirements.</P><A name=2805></A>
+<P class=BP>For environments with many concurrent users rapidly submitting 
+transactions, designers must assess transaction performance requirements in 
+terms of the expected transaction arrival rate and response time demands. 
+Frequently, for high-performance environments, the choice of isolation levels 
+involves a trade-off between consistency and concurrency.</P><A name=6538></A>
+<P class=BP>Application logic that checks database consistency must take into 
+account the fact that reads do not block writes in either mode.</P><A 
+name=2807></A>
+<P class=BP>Oracle isolation modes provide high levels of consistency, 
+concurrency, and performance through the combination of row-level locking and 
+Oracle's multiversion concurrency control system. Readers and writers do not 
+block one another in Oracle. Therefore, while queries still see consistent data, 
+both read committed and serializable isolation provide a high level of 
+concurrency for high performance, without the need for reading uncommitted 
+("dirty") data.</P><A name=2811></A><!--TOC=h3-"2811"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Read 
+Committed Isolation</FONT></H4><!--/TOC=h3--><A name=2813></A>
+<P class=BP>For many applications, read committed is the most appropriate 
+isolation level. Read committed isolation can provide considerably more 
+concurrency with a somewhat increased risk of inconsistent results due to 
+phantoms and non-repeatable reads for some transactions.</P><A name=6556></A>
+<P class=BP>Many high-performance environments with high transaction arrival 
+rates require more throughput and faster response times than can be achieved 
+with serializable isolation. Other environments that supports users with a very 
+low transaction arrival rate also face very low risk of incorrect results due to 
+phantoms and nonrepeatable reads. Read committed isolation is suitable for both 
+of these environments.</P><A name=2817></A>
+<P class=BP>Oracle read committed isolation provides transaction set consistency 
+for every query. That is, every query sees data in a consistent state. 
+Therefore, read committed isolation will suffice for many applications that 
+might require a higher degree of isolation if run on other database management 
+systems that do not use multiversion concurrency control.</P><A name=2819></A>
+<P class=BP>Read committed isolation mode does not require application logic to 
+trap the "Cannot serialize access" error and loop back to restart a transaction. 
+In most applications, few transactions have a functional need to issue the same 
+query twice, so for many applications protection against phantoms and 
+non-repeatable reads is not important. Therefore many developers choose read 
+committed to avoid the need to write such error checking and retry code in each 
+transaction.</P><A name=2821></A><!--TOC=h3-"2821"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Serializable Isolation</FONT></H4><!--/TOC=h3--><A name=2823></A>
+<P class=BP>Oracle's serializable isolation is suitable for environments where 
+there is a relatively low chance that two concurrent transactions will modify 
+the same rows and the long-running transactions are primarily read-only. It is 
+most suitable for environments with large databases and short transactions that 
+update only a few rows.</P><A name=2825></A>
+<P class=BP>Serializable isolation mode provides somewhat more consistency by 
+protecting against phantoms and nonrepeatable reads and can be important where a 
+read/write transaction executes a query more than once.</P><A name=6551></A>
+<P class=BP>Unlike other implementations of serializable isolation, which lock 
+blocks for read as&nbsp;well as write, Oracle provides nonblocking queries and 
+the fine granularity of row-level locking, both of which reduce write/write 
+contention. For applications that experience mostly read/write contention, 
+Oracle serializable isolation can provide significantly more throughput than 
+other systems. Therefore, some applications might be suitable for serializable 
+isolation on Oracle but not on other&nbsp;systems.</P><A name=2827></A>
+<P class=BP>All queries in an Oracle serializable transaction see the database 
+as of a single point in time, so this isolation level is suitable where multiple 
+consistent queries must be issued in a read/write transaction. A report-writing 
+application that generates summary data and stores it in the database might use 
+serializable mode because it provides the consistency that a <CODE>READ</CODE> 
+<CODE>ONLY</CODE> transaction provides, but also allows <CODE>INSERT</CODE>, 
+<CODE>UPDATE</CODE>, and <CODE>DELETE</CODE>.</P><A name=13492></A>
+<DIV align=center>
+<TABLE class=Note dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=Note>
+    <TD class=Note>
+      <HR>
+      <A name=13495></A><FONT face="Arial, Helvetica, sans-serif"><STRONG 
+      class=NH>Note:</STRONG></FONT> <A name=13496></A>
+      <P class=NB>Transactions containing DML statements with subqueries should 
+      use serializable isolation to guarantee consistent read.</P>
+      <HR>
+    </TD></TR></TBODY></TABLE></DIV><A name=2829></A>
+<P class=BP>Coding serializable transactions requires extra work by the 
+application developer to check for the "Cannot serialize access" error and to 
+roll back and retry the transaction. Similar extra coding is needed in other 
+database management systems to manage deadlocks. For adherence to corporate 
+standards or for applications that are run on multiple database management 
+systems, it may be necessary to design transactions for serializable mode. 
+Transactions that check for serializability failures and retry can be used with 
+Oracle read committed mode, which does not generate serializability 
+errors.</P><A name=2831></A>
+<P class=BP>Serializable mode is probably not the best choice in an environment 
+with relatively long transactions that must update the same rows accessed by a 
+high volume of short update transactions. Because a longer running transaction 
+is unlikely to be the first to modify a given row, it will repeatedly need to 
+roll back, wasting work. Note that a conventional read-locking, pessimistic 
+implementation of serializable mode would not be suitable for this environment 
+either, because long-running transactions--even read transactions--would block 
+the progress of short update transactions and vice versa.)</P><A name=2833></A>
+<P class=BP>Application developers should take into account the cost of rolling 
+back and retrying transactions when using serializable mode. As with 
+read-locking systems, where deadlocks occur frequently, use of serializable mode 
+requires rolling back the work done by terminated transactions and retrying 
+them. In a high contention environment, this activity can use significant 
+resources.</P><A name=2835></A>
+<P class=BP>In most environments, a transaction that restarts after receiving 
+the "Cannot serialize access" error is unlikely to encounter a second conflict 
+with another transaction. For this reason it can help to execute those 
+statements most likely to contend with other transactions as early as possible 
+in a serializable transaction. However, there is no guarantee that the 
+transaction will complete successfully, so the application should be coded to 
+limit the number of retries.</P><A name=2837></A>
+<P class=BP>Although Oracle serializable mode is compatible with SQL92 and 
+offers many benefits compared with read-locking implementations, it does not 
+provide semantics identical to such systems. Application designers must take 
+into account the fact that reads in Oracle do not block writes as they do in 
+other systems. Transactions that check for database consistency at the 
+application level can require coding techniques such as the use of 
+<CODE>SELECT</CODE> <CODE>FOR</CODE> <CODE>UPDATE</CODE>. This issue should be 
+considered when applications using serializable mode are ported to Oracle from 
+other environments.</P><A name=19024></A><!--TOC=h3-"19024"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Quiesce 
+Database</FONT></H4><!--/TOC=h3--><A name=20357></A>
+<P class=BP>You can put the system into <STRONG class=GlossaryTerm>quiesced 
+state</STRONG>. The system is in quiesced state if there are no active sessions, 
+other than <CODE>SYS</CODE> and <CODE>SYSTEM</CODE>. An active session is 
+defined as a session that is currently inside a transaction, a query, a fetch or 
+a PL/SQL procedure, or a session that is currently holding any shared resources 
+(for example, enqueues). Database administrators are the only users who can 
+proceed when the system is in quiesced state.</P><A name=19063></A>
+<P class=BP>Database administrators can perform certain actions in the quiesced 
+state that cannot be safely done when the system is not quiesced. These actions 
+include:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=19039></A>Actions that might fail if there are 
+  concurrent user transactions or queries. For example, changing the schema of a 
+  database table will fail if a concurrent transaction is accessing the same 
+  table. 
+  <LI class=LB1 type=disc><A name=19040></A>Actions whose intermediate effect 
+  could be detrimental to concurrent user transactions or queries. For example: 
+  <OL class=LN2 type=1>
+    <LI class=LN2 type=1 value=1><A name=19071></A>Change the schema of a 
+    database table. 
+    <LI class=LN2 type=1 value=2><A name=19076></A>Update a PL/SQL procedure to 
+    a new version that uses this new schema of the database table. </LI></OL><A 
+  name=19081></A>
+  <P class=BP1>Between Step 1 and Step 2, the new schema of the table is 
+  inconsistent with the implementation of the PL/SQL procedure. This 
+  inconsistency would adversely affect users concurrently trying to execute the 
+  PL/SQL procedure.</P></LI></UL><A name=19041></A>
+<P class=BP>For systems that must operate continuously, the ability to perform 
+such actions without shutting down the database is critical.</P><A 
+name=19042></A>
+<P class=BP>The Database Resource Manager blocks all actions that were initiated 
+by a user other than <CODE>SYS</CODE> or <CODE>SYSTEM</CODE> while the system is 
+quiesced. Such actions are allowed to proceed when the system goes back to 
+normal (unquiesced) state. Users do not get any additional error messages from 
+the quiesced state.</P><A name=19290></A><!--TOC=h4-"19290"-->
+<H5 class=H4><FONT face="Arial, Helvetica, sans-serif" color=#330099>How a 
+Database Is Quiesced</FONT></H5><!--/TOC=h4--><A name=21185></A>
+<P class=BP>The database administrator uses the <CODE>ALTER</CODE> 
+<CODE>SYSTEM</CODE> <CODE>QUIESCE</CODE> <CODE>RESTRICTED</CODE> statement to 
+quiesce the database. Only users <CODE>SYS</CODE> and <CODE>SYSTEM</CODE> can 
+issue the <CODE>ALTER</CODE> <CODE>SYSTEM</CODE> <CODE>QUIESCE</CODE> 
+<CODE>RESTRICTED</CODE> statement. For all instances with the database open, 
+issuing this statement has the following effect:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=20457></A>Oracle instructs the Database 
+  Resource Manager in all instances to prevent all inactive sessions (other than 
+  <CODE>SYS</CODE> and <CODE>SYSTEM</CODE>) from becoming active. No user other 
+  than <CODE>SYS</CODE> and <CODE>SYSTEM</CODE> can start a new transaction, a 
+  new query, a new fetch, or a new PL/SQL operation. 
+  <LI class=LB1 type=disc><A name=20458></A>Oracle waits for all existing 
+  transactions in all instances that were initiated by a user other than 
+  <CODE>SYS</CODE> or <CODE>SYSTEM</CODE> to finish (either commit or 
+  terminate). Oracle also waits for all running queries, fetches, and PL/SQL 
+  procedures in all instances that were initiated by users other than 
+  <CODE>SYS</CODE> or <CODE>SYSTEM</CODE> and that are not inside transactions 
+  to finish. If a query is carried out by multiple successive OCI fetches, 
+  Oracle does not wait for all fetches to finish. It waits for the current fetch 
+  to finish and then blocks the next fetch. Oracle also waits for all sessions 
+  (other than those of <CODE>SYS</CODE> or <CODE>SYSTEM</CODE>) that hold any 
+  shared resources (such as enqueues) to release those resources. After all 
+  these operations finish, Oracle places the database into quiesced state and 
+  finishes executing the <CODE>QUIESCE</CODE> <CODE>RESTRICTED</CODE> statement. 
+
+  <LI class=LB1 type=disc><A name=20459></A>If an instance is running in shared 
+  server mode, Oracle instructs the Database Resource Manager to block logins 
+  (other than <CODE>SYS</CODE> or <CODE>SYSTEM</CODE>) on that instance. If an 
+  instance is running in non-shared-server mode, Oracle does not impose any 
+  restrictions on user logins in that instance. </LI></UL><A name=20460></A>
+<P class=BP>During the quiesced state, you cannot change the Resource Manager 
+plan in any instance.</P><A name=19246></A>
+<P class=BP>The <CODE>ALTER</CODE> <CODE>SYSTEM</CODE> <CODE>UNQUIESCE</CODE> 
+statement puts all running instances back into normal mode, so that all blocked 
+actions can proceed.</P><A name=19256></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=19249></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=19250></A>
+      <UL class=NL>
+        <LI class=NL type=disc><A name=19254></A><EM class=Italic><A 
+        href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96540/toc.htm">Oracle9i 
+        SQL Reference</A></EM> 
+        <LI class=NL type=disc><A name=19255></A><EM class=Italic><A 
+        href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96521/toc.htm">Oracle9i 
+        Database Administrator's Guide</A></EM> 
+</LI></UL></TD></TR></TBODY></TABLE></DIV><A name=2841></A><!--TOC=h1-"2841"-->
+<H2 class=H1><A name=CNCPT321><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>How Oracle Locks Data</FONT></A></H2><!--/TOC=h1--><A 
+name=2847></A>
+<P class=BP><EM class=Italic>Locks</EM> are mechanisms that prevent destructive 
+interaction between transactions accessing the same <STRONG 
+class=Bold>resource</STRONG>--either user objects such as tables and rows or 
+system objects not visible to users, such as shared data structures in memory 
+and data dictionary rows.</P><A name=18112></A>
+<P class=BP>In all cases, Oracle automatically obtains necessary locks when 
+executing SQL statements, so users need not be concerned with such details. 
+Oracle automatically uses the lowest applicable level of restrictiveness to 
+provide the highest degree of data concurrency yet also provide fail-safe data 
+integrity. Oracle also allows the user to lock data manually.</P><A 
+name=18123></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=18115></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=18122></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2937">"Types 
+      of Locks"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#2937"></A></P></TD></TR></TBODY></TABLE></DIV><A 
+name=18124></A><!--TOC=h2-"18124"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Transactions and Data Concurrency</FONT></H3><!--/TOC=h2--><A 
+name=2879></A>
+<P class=BP>Oracle provides data concurrency and integrity between transactions 
+using its locking mechanisms. Because the locking mechanisms of Oracle are tied 
+closely to transaction control, application designers need only define 
+transactions properly, and Oracle automatically manages locking.</P><A 
+name=6660></A>
+<P class=BP>Keep in mind that Oracle locking is fully automatic and requires no 
+user action. Implicit locking occurs for all SQL statements so that database 
+users never need to lock any resource explicitly. Oracle's default locking 
+mechanisms lock data at the lowest level of restrictiveness to guarantee data 
+integrity while allowing the highest degree of data concurrency.</P><A 
+name=18034></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17647></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17648></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330">"Explicit 
+      (Manual) Data Locking"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330"></A></P></TD></TR></TBODY></TABLE></DIV><A 
+name=2881></A><!--TOC=h3-"2881"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Modes of 
+Locking</FONT></H4><!--/TOC=h3--><A name=6016></A>
+<P class=BP>Oracle uses two modes of locking in a multiuser database:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=22406></A>Exclusive lock mode prevents the 
+  associates resource from being shared. This lock mode is obtained to modify 
+  data. The first transaction to lock a resource exclusively is the only 
+  transaction that can alter the resource until the exclusive lock is released. 
+  <LI class=LB1 type=disc><A name=22413></A>Share lock mode allows the 
+  associated resource to be shared, depending on the operations involved. 
+  Multiple users reading data can share the data, holding share locks to prevent 
+  concurrent access by a writer (who needs an exclusive lock). Several 
+  transactions can acquire share locks on the same resource. </LI></UL><A 
+name=6015></A><!--TOC=h3-"6015"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Lock 
+Duration</FONT></H4><!--/TOC=h3--><A name=2883></A>
+<P class=BP>All locks acquired by statements within a transaction are held for 
+the duration of the transaction, preventing destructive interference including 
+dirty reads, lost updates, and destructive DDL operations from concurrent 
+transactions. The changes made by the SQL statements of one transaction become 
+visible only to other transactions that start <EM class=Italic>after</EM> the 
+first transaction is committed.</P><A name=2885></A>
+<P class=BP>Oracle releases all locks acquired by the statements within a 
+transaction when you either commit or roll back the transaction. Oracle also 
+releases locks acquired after a savepoint when rolling back to the savepoint. 
+However, only transactions not waiting for the previously locked resources can 
+acquire locks on the now available resources. Waiting transactions will continue 
+to wait until after the original transaction commits or rolls back 
+completely.</P><A name=2891></A><!--TOC=h3-"2891"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Data Lock 
+Conversion Versus Lock Escalation</FONT></H4><!--/TOC=h3--><A name=2901></A>
+<P class=BP>A transaction holds exclusive row locks for all rows inserted, 
+updated, or deleted within the transaction. Because row locks are acquired at 
+the highest degree of restrictiveness, no lock conversion is required or 
+performed.</P><A name=2903></A>
+<P class=BP>Oracle automatically converts a table lock of lower restrictiveness 
+to one of higher restrictiveness as appropriate. For example, assume that a 
+transaction uses a <CODE>SELECT</CODE> statement with the <CODE>FOR</CODE> 
+<CODE>UPDATE</CODE> clause to lock rows of a table. As a result, it acquires the 
+exclusive row locks and a row share table lock for the table. If the transaction 
+later updates one or more of the locked rows, the row share table lock is 
+automatically converted to a row exclusive table lock.</P><A name=6111></A>
+<P class=BP><STRONG class=Bold>Lock escalation</STRONG> occurs when numerous 
+locks are held at one level of granularity (for example, rows) and a database 
+raises the locks to a higher level of granularity (for example, table). For 
+example, if a single user locks many rows in a table, some databases 
+automatically escalate the user's row locks to a single table. The number of 
+locks is reduced, but the restrictiveness of what is being locked is 
+increased.</P><A name=6112></A>
+<P class=BP><EM class=Italic>Oracle never escalates locks.</EM> Lock escalation 
+greatly increases the likelihood of deadlocks. Imagine the situation where the 
+system is trying to escalate locks on behalf of transaction T1 but cannot 
+because of the locks held by transaction T2. A deadlock is created if 
+transaction T2 also requires lock escalation of the same data before it can 
+proceed.</P><A name=18037></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17663></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17664></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3017">"Table 
+      Locks (TM)"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3017"></A></P></TD></TR></TBODY></TABLE></DIV><A 
+name=6037></A><!--TOC=h2-"6037"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" 
+color=#330099>Deadlocks</FONT></H3><!--/TOC=h2--><A name=6042></A>
+<P class=BP>A <STRONG class=Bold>deadlock</STRONG> can occur when two or more 
+users are waiting for data locked by each other. Deadlocks prevent some 
+transactions from continuing to work. <A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#6047">Figure&nbsp;20-3</A> 
+illustrates two transactions in a deadlock.</P><A name=9216></A>
+<P class=BP>In <A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#6047">Figure&nbsp;20-3</A>, 
+no problem exists at time point A, as each transaction has a row lock on the row 
+it attempts to update. Each transaction proceeds without being terminated. 
+However, each tries next to update the row currently held by the other 
+transaction. Therefore, a deadlock results at time point B, because neither 
+transaction can obtain the resource it needs to proceed or terminate. It is a 
+deadlock because no matter how long each transaction waits, the conflicting 
+locks are held.</P><A name=6047></A>
+<H4 class=FT><FONT face="Arial, Helvetica, sans-serif"><EM>Figure 20-3 Two 
+Transactions in a Deadlock</EM></FONT></H4><A name=6051><IMG 
+alt="Text description of cncpt068.gif follows" 
+src="Data Concurrency and Consistency_files/cncpt068.gif"></A><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/img_text/cncpt068.htm"><BR>Text 
+description of the illustration cncpt068.gif</A><BR><BR><A name=2907></A><!--TOC=h3-"2907"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Deadlock 
+Detection</FONT></H4><!--/TOC=h3--><A name=2913></A>
+<P class=BP>Oracle automatically detects deadlock situations and resolves them 
+by rolling back one of the statements involved in the deadlock, thereby 
+releasing one set of the conflicting row locks. A corresponding message also is 
+returned to the transaction that undergoes statement-level rollback. The 
+statement rolled back is the one belonging to the transaction that detects the 
+deadlock. Usually, the signalled transaction should be rolled back explicitly, 
+but it can retry the rolled-back statement after waiting.&nbsp;</P><A 
+name=9196></A>
+<DIV align=center>
+<TABLE class=Note dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=Note>
+    <TD class=Note>
+      <HR>
+      <A name=9203></A><FONT face="Arial, Helvetica, sans-serif"><STRONG 
+      class=NH>Note:</STRONG></FONT> <A name=9204></A>
+      <P class=NB>In distributed transactions, local deadlocks are detected 
+      by&nbsp;analyzing a "waits for" graph, and global deadlocks are detected 
+      by a time-out. Once detected, nondistributed and distributed deadlocks are 
+      handled by the database and application in the same&nbsp;way.</P>
+      <HR>
+    </TD></TR></TBODY></TABLE></DIV><A name=2925></A>
+<P class=BP>Deadlocks most often occur when transactions explicitly override the 
+default locking of Oracle. Because Oracle itself does no lock escalation and 
+does not use read locks for queries, but does use row-level locking (rather than 
+page-level locking), deadlocks occur infrequently in Oracle.</P><A 
+name=18040></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17680></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17681></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330">"Explicit 
+      (Manual) Data Locking"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330"></A> 
+      for more information about manually acquiring 
+locks</P></TD></TR></TBODY></TABLE></DIV><A name=2927></A><!--TOC=h3-"2927"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Avoid 
+Deadlocks</FONT></H4><!--/TOC=h3--><A name=2933></A>
+<P class=BP>Multitable deadlocks can usually be avoided if transactions 
+accessing the same tables lock those tables in the same order, either through 
+implicit or explicit locks. For example, all application developers might follow 
+the rule that when both a master and detail table are updated, the master table 
+is locked first and then the detail table. If such rules are properly designed 
+and then followed in all applications, deadlocks are very unlikely to 
+occur.</P><A name=2935></A>
+<P class=BP>When you know you will require a sequence of locks for one 
+transaction, consider acquiring the most exclusive (least compatible) lock 
+first.</P><A name=2937></A><!--TOC=h2-"2937"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>Types of 
+Locks</FONT></H3><!--/TOC=h2--><A name=2943></A>
+<P class=BP>Oracle automatically uses different types of locks to control 
+concurrent access to data and to prevent destructive interaction between users. 
+Oracle automatically locks a resource on behalf of a transaction to prevent 
+other transactions from doing something also requiring exclusive access to the 
+same resource. The lock is released automatically when some event occurs so that 
+the transaction no longer requires the resource.</P><A name=2957></A>
+<P class=BP>Throughout its operation, Oracle automatically acquires different 
+types of locks at different levels of restrictiveness depending on the resource 
+being locked and the operation being performed.</P><A name=9232></A>
+<P class=BP>Oracle locks fall into one of three general categories.</P><A 
+name=22423></A>
+<TABLE class=Informal dir=ltr title="" cellSpacing=0 cellPadding=3 rules=groups 
+width="100%" summary="" border=1 frame=hsides>
+  <THEAD>
+  <TR class=Informal>
+    <TH class=Informal vAlign=bottom scope=col align=left><A 
+      name=22426></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Lock</STRONG></FONT></TH>
+    <TH class=Informal vAlign=bottom scope=col align=left><A 
+      name=22428></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Description</STRONG></FONT></TH></TR></THEAD>
+  <TBODY>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22445></A>
+      <P class=TS>DML locks (data locks)</P></TD>
+    <TD class=Informal><A name=22454></A>
+      <P class=TS>DML locks protect data. For example, table locks lock entire 
+      tables, row locks lock selected rows.</P></TD></TR>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22463></A>
+      <P class=TS>DDL locks (dictionary locks)</P></TD>
+    <TD class=Informal><A name=22472></A>
+      <P class=TS>DDL locks protect the structure of schema objects--for 
+      example, the definitions of tables and views.</P></TD></TR>
+  <TR class=Informal vAlign=top align=left>
+    <TD class=Informal><A name=22481></A>
+      <P class=TS>Internal locks and latches</P></TD>
+    <TD class=Informal><A name=22490></A>
+      <P class=TS>Internal locks and latches protect internal database 
+      structures such as datafiles. Internal locks and latches are entirely 
+      automatic.</P></TD></TR></TBODY></TABLE><A name=2987></A>
+<P class=BP>The following sections discuss DML locks, DDL locks, and internal 
+locks.</P><A name=2989></A><!--TOC=h2-"2989"-->
+<H3 class=H2><FONT face="Arial, Helvetica, sans-serif" color=#330099>DML 
+Locks</FONT></H3><!--/TOC=h2--><A name=2995></A>
+<P class=BP>The purpose of a DML (data) lock is to guarantee the integrity of 
+data being accessed concurrently by multiple users. DML locks prevent 
+destructive interference of simultaneous conflicting DML or DDL operations. For 
+example, Oracle DML locks guarantee that a specific row in a table can be 
+updated by only one transaction at a time and that a table cannot be dropped if 
+an uncommitted transaction contains an insert into the table.</P><A 
+name=2997></A>
+<P class=BP>DML operations can acquire data locks at two different levels: for 
+specific rows and for entire tables.</P><A name=9233></A>
+<DIV align=center>
+<TABLE class=Note dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=Note>
+    <TD class=Note>
+      <HR>
+      <A name=9236></A><FONT face="Arial, Helvetica, sans-serif"><STRONG 
+      class=NH>Note:</STRONG></FONT> <A name=9241></A>
+      <P class=NB>The acronym in parentheses after each type of lock or lock 
+      mode is the abbreviation used in the Locks Monitor of Enterprise Manager. 
+      Enterprise Manager might display TM for any table lock, rather than 
+      indicate the mode of table lock (such as RS or SRX).</P>
+      <HR>
+    </TD></TR></TBODY></TABLE></DIV><A name=2999></A><!--TOC=h3-"2999"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Row Locks 
+(TX)</FONT></H4><!--/TOC=h3--><A name=6615></A>
+<P class=BP>The only DML locks Oracle acquires automatically are row-level 
+locks. There is no limit to the number of row locks held by a statement or 
+transaction, and Oracle does not escalate locks from the row level to a coarser 
+granularity. Row locking provides the finest grain locking possible and so 
+provides the best possible concurrency and throughput.</P><A name=6616></A>
+<P class=BP>The combination of multiversion concurrency control and row-level 
+locking means that users contend for data only when accessing the same rows, 
+specifically:</P>
+<UL class=LB1>
+  <LI class=LB1 type=disc><A name=6618></A>Readers of data do not wait for 
+  writers of the same data rows. 
+  <LI class=LB1 type=disc><A name=6619></A>Writers of data do not wait for 
+  readers of the same data rows unless <CODE>SELECT</CODE>&nbsp;... 
+  <CODE>FOR</CODE> <CODE>UPDATE</CODE> is used, which specifically requests a 
+  lock for the reader. 
+  <LI class=LB1 type=disc><A name=6620></A>Writers only wait for other writers 
+  if they attempt to update the same rows at the same time. 
+  <P><A name=9282></A></P>
+  <DIV align=center>
+  <TABLE class=Note dir=ltr title="This is a layout table to format a note" 
+  cellSpacing=0 cellPadding=0 width="80%" 
+  summary="This is a layout table to format a note" border=0>
+    <TBODY>
+    <TR class=Note>
+      <TD class=Note>
+        <HR>
+        <A name=9285></A><FONT face="Arial, Helvetica, sans-serif"><STRONG 
+        class=NH>Note:</STRONG></FONT> <A name=9286></A>
+        <P class=NB>Readers of data may have to wait for writers of the same 
+        data blocks in some very special cases of pending distributed 
+        transactions.</P>
+        <HR>
+      </TD></TR></TBODY></TABLE></DIV></LI></UL><A name=21189></A>
+<P class=BP>A transaction acquires an exclusive DML lock for each individual row 
+modified by one of the following statements: <CODE>INSERT</CODE>, 
+<CODE>UPDATE</CODE>, <CODE>DELETE</CODE>, and <CODE>SELECT</CODE> with the 
+<CODE>FOR</CODE> <CODE>UPDATE</CODE> clause.</P><A name=3011></A>
+<P class=BP>A modified row is <STRONG class=Bold>always</STRONG> locked 
+exclusively so that other users cannot modify the row until the transaction 
+holding the lock is committed or rolled back. However, if the transaction dies 
+due to instance failure, block-level recovery makes a row available before the 
+entire transaction is recovered. Row locks are always acquired automatically by 
+Oracle as a result of the statements listed previously.</P><A name=5280></A>
+<P class=BP>If a transaction obtains a row lock for a row, the transaction also 
+acquires a table lock for the corresponding table. The table lock prevents 
+conflicting DDL operations that would override data changes in a current 
+transaction.</P><A name=18044></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17699></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=19708></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3188">"DDL 
+      Locks"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3188"></A></P></TD></TR></TBODY></TABLE></DIV><A 
+name=3017></A><!--TOC=h3-"3017"-->
+<H4 class=H3><FONT face="Arial, Helvetica, sans-serif" color=#330099>Table Locks 
+(TM)</FONT></H4><!--/TOC=h3--><A name=21195></A>
+<P class=BP>A transaction acquires a table lock when a table is modified in the 
+following DML statements: <CODE>INSERT</CODE>, <CODE>UPDATE</CODE>, 
+<CODE>DELETE</CODE>, <CODE>SELECT</CODE> with the <CODE>FOR</CODE> 
+<CODE>UPDATE</CODE> clause, and <CODE>LOCK</CODE> <CODE>TABLE</CODE>. These DML 
+operations require table locks for two purposes: to reserve DML access to the 
+table on behalf of a transaction and to prevent DDL operations that would 
+conflict with the transaction. Any table lock prevents the acquisition of an 
+exclusive DDL lock on the same table and thereby prevents DDL operations that 
+require such locks. For example, a table cannot be altered or dropped if an 
+uncommitted transaction holds a table lock for it.</P><A name=5296></A>
+<P class=BP>A table lock can be held in any of several modes: row share (RS), 
+row exclusive (RX), share (S), share row exclusive (SRX), and exclusive (X). The 
+restrictiveness of a table lock's mode determines the modes in which other table 
+locks on the same table can be obtained and held.</P><A name=3032></A>
+<P class=BP><A 
+href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#9975">Table&nbsp;20-3</A> 
+shows the table lock modes that statements acquire and operations that those 
+locks permit and prohibit.</P>
+<H5 class=TT><A name=21817></A><A name=9975></A><STRONG><FONT 
+face="Arial, Helvetica, sans-serif"><EM>Table 20-3 Summary of Table Locks 
+&nbsp;</EM></FONT></STRONG></H5>
+<TABLE class=Formal dir=ltr title="" cellSpacing=0 cellPadding=3 rules=groups 
+width="100%" summary="" border=1 frame=hsides>
+  <THEAD>
+  <TR class=Formal>
+    <TH class=Formal vAlign=bottom scope=col rowSpan=2><A name=9921></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>SQL 
+    Statement</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col rowSpan=2><A name=9923></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Mode of Table 
+      Lock</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col colSpan=5><A name=9925></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>Lock Modes 
+      Permitted?</STRONG></FONT></TH></TR></THEAD>
+  <THEAD>
+  <TR class=Formal>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9939></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>RS</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9941></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>RX</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9943></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>S</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9945></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>SRX</STRONG></FONT></TH>
+    <TH class=Formal vAlign=bottom scope=col align=left><A name=9947></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG>X</STRONG></FONT></TH></TR></THEAD>
+  <TBODY>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9834></A>
+      <P class=TB><CODE>SELECT...FROM</CODE> 
+      <EM><CODE>table</CODE></EM><CODE>...</CODE></P></TD>
+    <TD class=Formal><A name=9836></A>
+      <P class=TB>none</P></TD>
+    <TD class=Formal><A name=9838></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9840></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9842></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9844></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9846></A>
+      <P class=TB>Y</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9820></A>
+      <P class=TB><CODE>INSERT INTO</CODE> <EM><CODE>table</CODE></EM> 
+      <CODE>...</CODE></P></TD>
+    <TD class=Formal><A name=9822></A>
+      <P class=TB>RX</P></TD>
+    <TD class=Formal><A name=9824></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9826></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9828></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9830></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9832></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9806></A>
+      <P class=TB><CODE>UPDATE</CODE> <EM><CODE>table</CODE></EM> 
+      <CODE>...</CODE></P></TD>
+    <TD class=Formal><A name=9808></A>
+      <P class=TB>RX</P></TD>
+    <TD class=Formal><A name=9810></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9812></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9814></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9816></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9818></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9792></A>
+      <P class=TB><CODE>DELETE FROM</CODE> <EM><CODE>table</CODE></EM> 
+      <CODE>...</CODE></P></TD>
+    <TD class=Formal><A name=9794></A>
+      <P class=TB>RX</P></TD>
+    <TD class=Formal><A name=9796></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9798></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9800></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9802></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9804></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9778></A>
+      <P class=TB><CODE>SELECT ... FROM</CODE> <EM><CODE>table</CODE></EM> 
+      <CODE>&nbsp;&nbsp;&nbsp;FOR&nbsp;UPDATE OF ...</CODE></P></TD>
+    <TD class=Formal><A name=9780></A>
+      <P class=TB>RS</P></TD>
+    <TD class=Formal><A name=9782></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9784></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9786></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9788></A>
+      <P class=TB>Y*</P></TD>
+    <TD class=Formal><A name=9790></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9764></A>
+      <P class=TB><CODE>LOCK TABLE</CODE> <EM><CODE>table</CODE></EM> <CODE>IN 
+      &nbsp;&nbsp;&nbsp;ROW&nbsp;SHARE MODE</CODE></P></TD>
+    <TD class=Formal><A name=9766></A>
+      <P class=TB>RS</P></TD>
+    <TD class=Formal><A name=9768></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9770></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9772></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9774></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9776></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9750></A>
+      <P class=TB><CODE>LOCK TABLE</CODE> <EM><CODE>table</CODE></EM> <CODE>IN 
+      &nbsp;&nbsp;&nbsp;ROW&nbsp;EXCLUSIVE MODE</CODE></P></TD>
+    <TD class=Formal><A name=9752></A>
+      <P class=TB>RX</P></TD>
+    <TD class=Formal><A name=9754></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9756></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9758></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9760></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9762></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9736></A>
+      <P class=TB><CODE>LOCK TABLE</CODE> <EM><CODE>table</CODE></EM> <CODE>IN 
+      &nbsp;&nbsp;&nbsp;SHARE MODE</CODE></P></TD>
+    <TD class=Formal><A name=9738></A>
+      <P class=TB>S</P></TD>
+    <TD class=Formal><A name=9740></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9742></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9744></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9746></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9748></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9722></A>
+      <P class=TB><CODE>LOCK TABLE</CODE> <EM><CODE>table</CODE></EM> <CODE>IN 
+      &nbsp;&nbsp;&nbsp;SHARE ROW EXCLUSIVE &nbsp;&nbsp;&nbsp;MODE</CODE></P></TD>
+    <TD class=Formal><A name=9724></A>
+      <P class=TB>SRX</P></TD>
+    <TD class=Formal><A name=9726></A>
+      <P class=TB>Y</P></TD>
+    <TD class=Formal><A name=9728></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9730></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9732></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9734></A>
+      <P class=TB>N</P></TD></TR>
+  <TR class=Formal vAlign=top align=left>
+    <TD class=Formal><A name=9708></A>
+      <P class=TB><CODE>LOCK TABLE</CODE> <EM><CODE>table</CODE></EM> <CODE>IN 
+      &nbsp;&nbsp;&nbsp;EXCLUSIVE MODE</CODE></P></TD>
+    <TD class=Formal><A name=9710></A>
+      <P class=TB>X</P></TD>
+    <TD class=Formal><A name=9712></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9714></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9716></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9718></A>
+      <P class=TB>N</P></TD>
+    <TD class=Formal><A name=9720></A>
+      <P class=TB>N</P></TD></TR></TBODY>
+  <TFOOT>
+  <TR class=Footer vAlign=top align=left>
+    <TD class=Footer>
+      <P class=TableKeyFoot><FONT size=-1><BR><A name=9680></A></FONT></P></TD>
+    <TD class=Footer colSpan=2>
+      <P class=TableKeyFoot><FONT size=-1><BR><A name=9962></A>RS: row 
+      share<BR><A name=9887></A>RX: row exclusive<BR><A name=9958></A>S: 
+      share<BR><A name=9880></A>SRX: share row exclusive<BR><A name=9852></A>X: 
+      exclusive</FONT></P></TD>
+    <TD class=Footer colSpan=4>
+      <P class=TableKeyFoot><FONT size=-1><BR><A name=9879></A>*Yes, if no 
+      conflicting row locks are held by another transaction. Otherwise, waits 
+      occur.</FONT></P></TD></TR></TFOOT></TABLE><A name=3036></A>
+<P class=BP>The following sections explain each mode of table lock, from least 
+restrictive to most restrictive. They also describe the actions that cause the 
+transaction to acquire a table lock in that mode and which actions are permitted 
+and prohibited in other transactions by a lock in that mode.</P><A 
+name=18047></A>
+<DIV align=center>
+<TABLE class=NoteAlso dir=ltr title="This is a layout table to format a note" 
+cellSpacing=0 cellPadding=0 width="80%" 
+summary="This is a layout table to format a note" border=0>
+  <TBODY>
+  <TR class=NoteAlso>
+    <TD class=NoteAlso><A name=17751></A><FONT 
+      face="Arial, Helvetica, sans-serif"><STRONG class=NH>See 
+      Also:</STRONG></FONT> <A name=17764></A>
+      <P class=NB><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330">"Explicit 
+      (Manual) Data Locking"</A><A 
+      href="http://www.lc.leidenuniv.nl/awcourse/oracle/server.920/a96524/c21cnsis.htm#3330"></A></P></TD></TR></TBODY></TABLE></DIV><A 
+name=3046></A><!--TOC=h4-"3046"-->
+<H5 class=H4><FONT face="Arial, Helvetica, sans-serif" color=#330099>Row Share 
+Table Locks (RS)</FONT></H5><!--/TOC=h4--><A name=5196></A>
+<P class=BP>A row share table lock (also sometimes called a <STRONG 
+class=Bold>subshare table lock, SS</STRONG>) indicates that the transaction 
+holding the lock on the table has locked rows in the table and intends to update 
+them. A row share table lock is automatically acquired for a <EM 
+class=Italic>table</EM> when one of the following SQL statements is 
+executed:</P><PRE class=CE><A name=3048></A>SELECT ... FROM <EM class=Italic>table</EM> ... FOR UPDATE OF ... ;  
+<A name=10015></A>
+<A name=10016></A>LOCK TABLE <EM class=Italic>table</EM> IN ROW SHARE MODE; 
+<A name=10017></A>
+</PRE><A name=3052></A>
+<P class=BP>A row share table lock is the least restrictive mode of table lock, 
+offering the highest degree of concurrency for a table.</P><A name=3054></A>
+<P class=BP><EM class=Italic>Permitted Operations:</EM> A row share table lock 
+held by a transaction allows other trans</P></DIV></BODY></HTML>

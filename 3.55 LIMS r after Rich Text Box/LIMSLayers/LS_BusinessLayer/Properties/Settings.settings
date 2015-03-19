@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LS_BusinessLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LS_BusinessLayer_OliveService_OliveService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://87.106.184.4:84/CliqServiceBeta/OliveService.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

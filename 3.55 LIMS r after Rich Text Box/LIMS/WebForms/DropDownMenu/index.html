@@ -1,0 +1,28 @@
+<script type="text/javascript" src="scripts\cssexpr.js"></script>
+<link href="css\xmenu.css" type="text/css" rel="StyleSheet">
+<script type="text/javascript" src="scripts\xmenu.js"></script>
+
+<script type="text/javascript">
+
+	webfxMenuImagePath = "images/";
+	webfxMenuUseHover=true;
+	webfxMenuShowTime=3;
+	webfxMenuHideTime=600;
+
+	var myMenu = new WebFXMenu;
+	var myMenu2 = new WebFXMenu;
+	var item;
+	
+	var myMenu2 = new WebFXMenu;
+	myMenu2.add(new WebFXMenuItem("irfan"));
+	myMenu.add(new WebFXMenuItem("sub menu" , null, "Tool tip to show", myMenu2));
+
+	//document.write(myMenu);
+
+var myBar = new WebFXMenuBar;
+
+myBar.add(new WebFXMenuButton("Menu Button 2", null, "Tool tip to show", myMenu));
+document.write(myBar);
+
+</script>
+

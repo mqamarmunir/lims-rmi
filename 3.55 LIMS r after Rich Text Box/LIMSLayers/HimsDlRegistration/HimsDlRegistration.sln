@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HimsDlRegistration", "HimsDlRegistration.csproj", "{A83A1926-2704-4131-A299-5B90E06C3E72}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A83A1926-2704-4131-A299-5B90E06C3E72}.Debug.ActiveCfg = Debug|.NET
+		{A83A1926-2704-4131-A299-5B90E06C3E72}.Debug.Build.0 = Debug|.NET
+		{A83A1926-2704-4131-A299-5B90E06C3E72}.Release.ActiveCfg = Release|.NET
+		{A83A1926-2704-4131-A299-5B90E06C3E72}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

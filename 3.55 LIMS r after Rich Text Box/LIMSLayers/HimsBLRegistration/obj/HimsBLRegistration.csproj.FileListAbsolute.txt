@@ -1,0 +1,7 @@
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\bin\Debug\HimsBLRegistration.dll
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\bin\Debug\HimsBLRegistration.pdb
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\bin\Debug\HimsDlRegistration.dll
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\bin\Debug\HimsDlRegistration.pdb
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\obj\Debug\ResolveAssemblyReference.cache
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\obj\Debug\HimsBLRegistration.dll
+H:\Working\Trees Software\RMI\Web\LIMS\LIMSLayers\HimsBLRegistration\obj\Debug\HimsBLRegistration.pdb

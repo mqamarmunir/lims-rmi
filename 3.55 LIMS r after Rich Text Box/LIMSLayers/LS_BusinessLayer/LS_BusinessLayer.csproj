@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52136519-4844-4198-A367-DC34659B997C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LS_BusinessLayer</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LS_BusinessLayer</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;trACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <treatWarningsAsErrors>false</treatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>trACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <treatWarningsAsErrors>false</treatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlAllEmplooyesEval.cs" />
+    <Compile Include="clsBlalltestsinonelab.cs" />
+    <Compile Include="clsBLAttributeRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLAttributeSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlAttributeTemplates.cs" />
+    <Compile Include="clsBLBatchingTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLCashReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLClinic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLConsultants.cs" />
+    <Compile Include="clsBLCourierbatches.cs" />
+    <Compile Include="clsBLDepartment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDerivedAttributes.cs" />
+    <Compile Include="clsBLDerivedAttributesD.cs" />
+    <Compile Include="clsBLDiagnose.cs" />
+    <Compile Include="clsBLDoctor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDrug.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDtransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLDuesReceived.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLEMailPreferences.cs" />
+    <Compile Include="clsBLExternalOrganization.cs" />
+    <Compile Include="clsBLFacSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLGeneralTestresult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlHistoryTaking.cs" />
+    <Compile Include="clsBLICDDiseases.cs" />
+    <Compile Include="clsBLLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlManagementConsole.cs" />
+    <Compile Include="clsBLMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLMisc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLMtransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLOpinion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLOrganism.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLOrganization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatientHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatientQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatientSearch.cs" />
+    <Compile Include="clsBLPatientStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLPatientTestChange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlPatienttesthistory.cs" />
+    <Compile Include="clsBLPatientVisitRegistrationD.cs" />
+    <Compile Include="clsBLPatientVisitRegistrationM.cs" />
+    <Compile Include="clsBLPaymentMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlPeerReviews.cs" />
+    <Compile Include="clsBLPreferenceSettings.cs" />
+    <Compile Include="clsBLRank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLReception.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLRelationShip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLRepeatReasons.cs" />
+    <Compile Include="clsBlRepeatTest.cs" />
+    <Compile Include="clsBLReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLResultDespatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSearchPR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlSopTypes.cs" />
+    <Compile Include="clsBLSpecimen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSpecimenCollectionDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSpecimenColletion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSpecimenContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlSpecimenLife.cs" />
+    <Compile Include="clsBlSpecimenOutQueue.cs" />
+    <Compile Include="clsBLSpecimenType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLSubDepartment.cs" />
+    <Compile Include="clsBLTDiscountLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTestAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTestGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTestGroupD.cs" />
+    <Compile Include="clsBLTestHistory.cs" />
+    <Compile Include="clsBlTestMethod.cs" />
+    <Compile Include="clsBLTestPriceUpdate.cs" />
+    <Compile Include="clsBLTestProcedure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTestProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBlTestResultComments.cs" />
+    <Compile Include="clsBLTestresultM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLTestSchedule.cs" />
+    <Compile Include="clsBlTestSops.cs" />
+    <Compile Include="clsBLTMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLtransHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLUMatrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLUnit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLUSXRays.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLVault.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLWard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBLWorkList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsGeneralCollections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExternalSamples.cs" />
+    <Compile Include="FileIO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientRegView.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="QueryBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\OliveService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Projectreference Include="..\LS_DataLayer\LS_DataLayer.csproj">
+      <Project>{DEBBABC5-DA9D-4E0E-84F4-7BB230A44892}</Project>
+      <Name>LS_DataLayer</Name>
+    </Projectreference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://87.106.184.4:84/CliqServiceBeta/oliveservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OliveService\</RelPath>
+      <UpdateFromURL>http://87.106.184.4:84/CliqServiceBeta/oliveservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LS_BusinessLayer_OliveService_OliveService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OliveService\AllTemplate.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\AttributeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\OliveService.wsdl" />
+    <None Include="Web References\OliveService\OliveService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OliveService\OliveService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OliveService\OliveService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OliveService\OliveService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OliveService\OliveService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OliveService\PanelTest.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\Recipient.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OliveService\ResultTemplate.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\SearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\Specimen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\SpecimenDropDown.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\TestInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OliveService\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\OliveService\OliveService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,48 @@
+D:\LIMS r\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\LIMS r\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\LIMS r\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\LIMS r\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\LIMS r\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\Qamar\LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\Qamar\9.50 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+E:\Qamar\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\Qamar\Trees-RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+C:\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\Qamar\RMI\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\ResolveAssemblyReference.cache
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+D:\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.dll
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\bin\Debug\HimsDlRegistration.pdb
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.dll
+E:\Rmi Data 27-8\lims\lims\RMI\3.55 LIMS r after Rich Text Box\3.55 LIMS r after Rich Text Box\LIMSLayers\HimsDlRegistration\obj\Debug\HimsDlRegistration.pdb

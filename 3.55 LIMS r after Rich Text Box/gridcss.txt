@@ -1,0 +1,23 @@
+gridAlternate	
+datagrid
+gridheader	
+gridItem	
+gridSelectedItem	Bold
+gridHover		#f9f9e9
+
+
+// Create a new WebUIFacade.
+			WebUIFacade uiFacade = new WebUIFacade();
+    
+			// This is gives a tool tip for each
+			// of the columns to sort by.
+			uiFacade.SetHeaderToolTip(e);
+    
+    
+			// This sets a class for the link buttons in a grid.
+			uiFacade.SetGridLinkButtonStyle(e);
+    
+			// Make the row change color when the mouse hovers over.
+			// *** You must have a class called gridHover with a different background 
+			// color in your StyleSheet.
+			uiFacade.SetRowHover(this.dgTestList, e);

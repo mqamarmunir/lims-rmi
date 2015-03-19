@@ -1,0 +1,3 @@
+30 Aug, 2007
+	Convert reports into PDF
+	Specimen Collection window problem has been fixed (open towtice)

@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>haisam hospital</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<script language="JavaScript" type="text/JavaScript">
+function enterkeyformsubmission()
+{
+	if(event.keyCode==13)
+	{
+		submitform();
+	}
+}
+function submitform()
+{
+		if(document.indexform.userID.value.length==0)
+		{
+			alert("Please provide UserID to login");
+			document.indexform.userID.focus();
+			return false;
+		}
+		else if(document.indexform.password.value.length==0)
+		{
+			alert("Please provide password to login");
+			document.indexform.password.focus();
+			return false;
+		}
+		else
+		{
+			document.indexform.submit();
+		}
+}
+</script>
+
+  <TABLE WIDTH=1004 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+    <TR valign="top"> 
+      <TD colspan="5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr valign="top"> 
+            <td width="21%"><img src="images/haisam_logo.jpg" width="210" height="82"></td>
+            <td width="35%"><img src="images/empowering_hospital_header.jpg" width="540" height="82"></td>
+            <td width="44%"><img src="images/image.jpg" width="254" height="82"></td>
+          </tr>
+        </table></TD>
+    </TR>
+    <TR> 
+      <TD> <IMG SRC="images/haisam_06.gif" WIDTH=750 HEIGHT=18 ALT=""></TD>
+      <TD> <IMG SRC="images/haisam_07.gif" WIDTH=11 HEIGHT=18 ALT=""></TD>
+      <TD> <IMG SRC="images/haisam_08.gif" WIDTH=210 HEIGHT=18 ALT=""></TD>
+      <TD> <IMG SRC="images/haisam_09.gif" WIDTH=13 HEIGHT=18 ALT=""></TD>
+      <TD> <IMG SRC="images/haisam_10.gif" WIDTH=20 HEIGHT=18 ALT=""></TD>
+    </TR>
+  </TABLE>
+</BODY>
+</HTML>

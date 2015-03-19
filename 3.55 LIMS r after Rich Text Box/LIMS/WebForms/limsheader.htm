@@ -1,0 +1,251 @@
+<html>
+	<HEAD>
+		<title>Laboratory Information Management System</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<script language="javascript" type="text/javascript" src="menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="pro.css" />
+			<style type="text/css"> body { color:#6D6D6C; font-size:12px; font-weight:bold; font-family:Arial,Verdana; }
+	</style>
+			<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+			</script>
+	</HEAD>
+	<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+		<script language="JavaScript" type="text/JavaScript">
+function enterkeyformsubmission()
+{
+	if(event.keyCode==13)
+	{
+		submitform();
+	}
+}
+function submitform()
+{
+		if(document.indexform.userID.value.length==0)
+		{
+			alert("Please provide UserID to login");
+			document.indexform.userID.focus();
+			return false;
+		}
+		else if(document.indexform.password.value.length==0)
+		{
+			alert("Please provide password to login");
+			document.indexform.password.focus();
+			return false;
+		}
+		else
+		{
+			document.indexform.submit();
+		}
+}
+		</script>
+<table WIDTH="1004" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<tr valign="top">
+				<TD colspan="5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td width="21%"><img src="images/header_01.jpg" width=223 height=75 alt=""></td>
+          <TD> <IMG SRC="images/header_02.jpg" WIDTH=148 HEIGHT=75 ALT=""></TD>
+          <TD> <IMG SRC="images/header_03.jpg" WIDTH=416 HEIGHT=75 ALT=""></TD>
+          <td width="44%"><IMG SRC="images/header_04.jpg" WIDTH=217 HEIGHT=75 ALT=""></td>
+        </tr>
+      </table>
+				</TD>
+			</tr>			
+		</table>
+		<!-- Debut menu http://iubito.free.fr-->
+		
+<div id="Layer1" style="Z-INDEX:1; LEFT:226px; WIDTH:622px; POSITION:absolute; TOP:56px; HEIGHT:391px"> 
+  <div class="conteneurmenu" id="conteneurmenu">
+				<script language="Javascript" type="text/javascript">
+    preChargement();
+				</script>
+				<p id="menu1" class="menu" onmouseover="MontrerMenu('ssmenu1');" onmouseout="CacherDelai();">
+					<a href="http://localhost/hmis" onmouseover="MontrerMenu('ssmenu1');" onfocus="MontrerMenu('ssmenu1');">
+						Parameter<span></span></a>
+				</p>
+				<ul id="ssmenu1" class="ssmenu" onmouseover="AnnulerCacher();" onmouseout="CacherDelai();"
+					onfocus="AnnulerCacher();" onblur="CacherDelai();">
+					<li>
+						<a href="wfrmSubDepartment.aspx" target="_blank">SubDepartments<span></span></a>
+					</li>
+                    <li>
+						<a href="wfrmTestGroup.aspx" target="_blank">Test Groups<span></span></a>
+					</li>
+					<li>
+<!--						<a href="wfrmTest.aspx" target="blank">Test<span></span></a> -->
+						<a href="wfrmtest.aspx" target="_blank">Test<span></span></a> 
+						</li>
+                        	<li>
+
+						<a href="wfrmTestRegistrationNew.aspx" target="_blank">Test New<span></span></a> 
+						</li>
+					<li>
+						<a href="wfrmTestAttribute.aspx" target="_blank">Test Attribute<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmAttributeRange.aspx" target="_blank">Attribute Range<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmBatchedTests.aspx" target="_blank">Test Batch<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmMethod.aspx" target="_blank">Method<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmOrganism.aspx" target="_blank">Organism<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmDrug.aspx" target="_blank">Drug<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmSpecimenContainer.aspx" target="_blank">Specimen Container<span></span></a>
+						</li>
+					<li>
+						<a href="wfrmSpecimenType.aspx" target="_blank">Specimen Type<span></span></a>						
+					</li>
+                    	<li>
+						<a href="wfrmTestGroupD.aspx" target="_blank">Group Detail<span></span></a>						
+					</li>
+                    <li>
+						<a href="wfrmTestMethodConfig.aspx" target="_blank">Test Method Config<span></span></a>						
+					</li>
+                    <li>
+						<a href="wfrmRepeatReasonRegistration.aspx" target="_blank">Repeat Reasons<span></span></a>						
+					</li>
+                    <li>
+						<a href="wfrmAttributeTemplates.aspx" target="_blank">Attribute Templates<span></span></a>						
+					</li>
+                     <li>
+						<a href="wfrmConsultantsConfiguration.aspx" target="_blank">Consultants Configuration<span></span></a>						
+					</li>
+                    <li>
+						<a href="wfrmSpecimenlife.aspx" target="_blank">Specimen Life<span></span></a>						
+					</li>
+                     <li>
+						<a href="wfrmSopTypes.aspx" target="_blank">Sop Types<span></span></a>						
+					</li>
+                    <li>
+						<a href="wfrmTestSops.aspx" target="_blank">Test SOP Config.<span></span></a>						
+					</li>
+                      <li>
+						<a href="testtt.aspx" target="_blank">Preference Settings</a>
+					</li>
+                       <li>
+						<a href="wfrmTestPriceUpdate_new.aspx" target="_blank">Test Price Update</a>
+					</li>
+                    <li>
+						<a href="wfrmEmailPreferences.aspx" target="_blank">Email Config.</a>
+					</li>
+                    <li>
+						<a href="wfrmorganisation.aspx" target="_blank">External Organization Registration</a>
+					</li>
+                     <li>
+						<a href="wfrmtestmapper.aspx" target="_blank">Cliq Test Mapper</a>
+					</li>
+
+
+                   
+				</ul>
+				<!-- ----------------------------------------- -->
+				<p id="menu2" class="menu" onmouseout="CacherDelai();" onmouseover="MontrerMenu('ssmenu2');">
+					<a href="http://localhost/hmis" onfocus="MontrerMenu('ssmenu2');">transaction<span></span></a>
+				</p>
+				<ul id="ssmenu2" class="ssmenu" onmouseover="AnnulerCacher();" onmouseout="CacherDelai();"
+					onfocus="AnnulerCacher();" onblur="CacherDelai();">
+                    <li>
+						<a href="wfrmReceptionLab.aspx" target="_blank">Investigation Booking</a>
+					</li>
+					<li>
+						<a href="wfrmSpecimenCollection.aspx" target="_blank">Specimen Collection<span></span></a>
+						</li>
+					<!--<li>
+						<a href="wfrmWorkList.aspx" target="_blank">Work List<span></span></a>-->
+					<li>
+						<a href="wfrmSpecimentOutQueue.aspx" target="_blank">Specimen Out Queue<span></span></a>
+						</li>
+                    <li>
+						<a href="wfrmouttestreceiving.aspx" target="_blank">Specimen In Queue<span></span></a>
+						</li>
+                    <li>
+                    <li>
+						<a href="wfrmCollectionCenterrecieving.aspx" target="_blank">Collection Center Samples(Pending)<span></span></a>
+						</li>
+                    <li>
+						<a href="wfrmGeneralTestresult.aspx" target="_blank">Result Entry</a>
+					</li>
+					<li>
+						<a href="wfrmTestresultVerification.aspx" target="_blank">Result Verification</a>
+						</li>
+					<li>
+						<a href="wfrmResultCallBack.aspx" target="_blank">Result Call Back</a>
+					</li>
+					<!--<li>
+						<a href="wfrmPatientVisitregistration.aspx" target="_blank">Visit Registration</a>
+					</li>-->
+					
+                    <li>
+						<a href="wfrmResultDispatcher.aspx" target="_blank">Result Dispatch</a>
+					</li>
+                     <!--<li>
+						<a href="wfrmAllEmployeesEval.aspx" target="_blank">Employees Perfomance</a>
+					</li>-->
+                      <li>
+						<a href="wfrmPatientHistory_new.aspx" target="_blank">Patient Test history</a>
+					</li>
+                     <li>
+						<a href="wfrmPeerReview.aspx" target="_blank">Peer Reviews</a>
+					</li>
+                     <li>
+						<a href="wfrmManagementCons.aspx" target="_blank">Management Console</a>
+					</li>
+                 
+                   
+
+                  
+				</ul>
+				<!-- ----------------------------------------- -->
+				<p id="menu3" class="menu" onmouseover="MontrerMenu('ssmenu3');" onmouseout="CacherDelai();">
+					<a href="http://localhost/hmis" onfocus="MontrerMenu('ssmenu3');">Report<span></span></a>
+				</p>
+				<ul id="ssmenu3" class="ssmenu" onmouseover="AnnulerCacher();" onmouseout="CacherDelai();"
+					onfocus="AnnulerCacher();" onblur="CacherDelai();">
+					<li>
+						<a href="wfrmReport.aspx"  target="_blank">Reports<span></span></a>					
+					</li>
+                    <li>
+						<a href="wfrmTestCount.aspx"  target="_blank">LocationWise/Section Wise Statistics<span></span></a>					
+					</li>
+                    <li>
+						<a href="wfrmMonthlyWorkload.aspx"  target="_blank">Monthly Workload<span></span></a>					
+					</li>
+                    <li>
+						<a href="DuplicatebatchReport.aspx"  target="_blank">Batch Reports<span></span></a>					
+					</li>
+                     <li>
+						<a href="wfrmConsultantreport.aspx"  target="_blank">Consultants Report<span></span></a>					
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script language="Javascript" type="text/javascript">
+	var nbmenu=3;
+	var largeur_menu = 125;
+	var hauteur_menu = 50;
+	var largeur_sous_menu = 125;
+	var largeur_auto_ssmenu = false;
+	var espace_entre_menus = 2;
+	var marge_en_haut_de_page = 30;
+	var suivre_le_scroll=false;
+	var top_ssmenu = 23;
+    Chargement();
+		</script>
+        <div id="conteneurmenu"></div>
+</BODY>
+</html>
